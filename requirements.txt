@@ -90,7 +90,8 @@ retry-requests>=2.0.0       # Retry failed requests
 # meteostat>=1.6.0
 # pyet>=1.2.0
 # pulp>=2.7.0
-#backtesting
+#backtesting==0.3.3
+
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
