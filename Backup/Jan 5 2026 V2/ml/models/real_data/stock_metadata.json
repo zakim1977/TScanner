@@ -1,0 +1,30 @@
+{
+  "trained_at": "2026-01-03T08:01:15.808161",
+  "samples": 2068,
+  "features": [
+    "congress_score",
+    "insider_score",
+    "short_interest_pct",
+    "combined_score",
+    "institutional_diff",
+    "position_pct",
+    "position_early",
+    "position_late",
+    "ta_score",
+    "rsi",
+    "rsi_oversold",
+    "rsi_overbought",
+    "price_change_24h",
+    "congress_bullish",
+    "insider_bullish",
+    "short_squeeze_risk"
+  ],
+  "accuracy": 0.642512077294686,
+  "f1_score": 0.6288484785008881,
+  "label_map": {
+    "0": "SHORT",
+    "1": "WAIT",
+    "2": "LONG"
+  },
+  "data_source": "stock_history/*.json (REAL DATA)"
+}

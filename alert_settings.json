@@ -1,0 +1,13 @@
+{
+  "telegram_enabled": true,
+  "telegram_bot_token": "7900095633:AAHbCZTL4c3fEFMjS7GF3pHmSXLJf0aRKJU",
+  "telegram_chat_id": "1174650843",
+  "refresh_interval_minutes": 15,
+  "alert_conditions": {
+    "require_vwap_fresh": true,
+    "require_ml_aligned": true,
+    "require_early_position": true,
+    "min_score": 70,
+    "min_explosion": 60
+  }
+}

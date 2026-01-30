@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c:*)",
+      "Bash(where:*)",
+      "Bash(python3:*)",
+      "Bash(ls:*)",
+      "Bash(python -m py_compile:*)",
+      "Bash(py -m py_compile:*)",
+      "Bash(C:/Users/zakim/anaconda3/python.exe:*)",
+      "Bash(/c/Users/zakim/miniforge3/envs/py311/python.exe:*)",
+      "Bash(C:/Users/zakim/miniforge3/envs/py311/python.exe:*)",
+      "Bash(sqlite3:*)",
+      "Bash(py -3 -m py_compile:*)",
+      "Bash(/c/Users/zakim/AppData/Local/Microsoft/WindowsApps/python.exe:*)",
+      "Bash(py -c \"import py_compile; py_compile.compile\\(''liquidity_hunter/quality_model.py'', doraise=True\\); print\\(''OK''\\)\")",
+      "Bash(py -c \"import py_compile; py_compile.compile\\(''C:/Users/zakim/training/TScanner/liquidity_hunter/quality_model.py'', doraise=True\\); print\\(''OK''\\)\")",
+      "Bash(/c/Users/zakim/anaconda3/python.exe:*)",
+      "Bash(conda run python -c \"import py_compile; py_compile.compile\\(''C:/Users/zakim/training/TScanner/liquidity_hunter/quality_model.py'', doraise=True\\); print\\(''OK''\\)\")",
+      "Bash(xxd:*)"
+    ]
+  }
+}

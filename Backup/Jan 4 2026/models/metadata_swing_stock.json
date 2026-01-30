@@ -1,0 +1,60 @@
+{
+  "mode": "swing",
+  "asset_type": "stock",
+  "trained_at": "2026-01-03T14:49:44.338436",
+  "is_real_ml": true,
+  "model_type": "stock_specific",
+  "feature_names": [
+    "rsi",
+    "rsi_oversold",
+    "rsi_overbought",
+    "rsi_neutral",
+    "trend",
+    "trend_bullish",
+    "trend_bearish",
+    "atr_pct",
+    "bb_squeeze_pct",
+    "bb_width_pct",
+    "price_change_short",
+    "price_change_medium",
+    "price_change_long",
+    "volume_ratio",
+    "volume_trend",
+    "above_sma20",
+    "above_sma50",
+    "above_sma200",
+    "macd_signal",
+    "macd_histogram",
+    "position_pct",
+    "near_support",
+    "near_resistance",
+    "momentum_5",
+    "momentum_20",
+    "volatility_rank",
+    "volume_rank",
+    "congress_score",
+    "insider_score",
+    "short_interest",
+    "institutional_diff"
+  ],
+  "n_features": 31,
+  "metrics": {
+    "direction_f1": 0.7820947274428234,
+    "direction_accuracy": 0.7952755905511811,
+    "eta_mae": 2.8623529547600093,
+    "sl_mae": 1.521167363803423,
+    "n_samples": 5080,
+    "label_distribution": {
+      "SHORT": 1813,
+      "WAIT": 872,
+      "LONG": 2395
+    }
+  },
+  "config": {
+    "interval": "1d",
+    "period": "2y",
+    "lookahead_candles": 10,
+    "profit_threshold": 3.0,
+    "loss_threshold": 2.0
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "mode": "investment",
+  "trained_at": "2026-01-05T07:44:19.975232",
+  "is_real_ml": true,
+  "model_type": "mode_specific",
+  "feature_names": [
+    "whale_pct",
+    "retail_pct",
+    "whale_retail_divergence",
+    "position_in_range",
+    "position_early",
+    "position_late",
+    "oi_change",
+    "oi_signal",
+    "oi_bullish",
+    "oi_bearish",
+    "rsi",
+    "rsi_oversold",
+    "rsi_overbought",
+    "rsi_neutral",
+    "trend",
+    "trend_bullish",
+    "trend_bearish",
+    "atr_pct",
+    "bb_squeeze_pct",
+    "bb_width_pct",
+    "energy_loaded",
+    "explosion_ready",
+    "price_change_short",
+    "price_change_medium",
+    "price_change_long",
+    "volume_ratio",
+    "buy_pressure",
+    "near_support",
+    "near_resistance",
+    "at_demand_zone",
+    "at_supply_zone",
+    "btc_correlation",
+    "market_trend"
+  ],
+  "n_features": 33,
+  "metrics": {
+    "direction_f1": 0.7735563750805327,
+    "direction_accuracy": 0.7917771883289124,
+    "eta_mae": 3.7192027747708702,
+    "sl_mae": 5.504616543568507,
+    "n_samples": 3769,
+    "label_distribution": {
+      "SHORT": 1956,
+      "WAIT": 448,
+      "LONG": 1365
+    }
+  },
+  "config": {
+    "timeframes": [
+      "1d"
+    ],
+    "lookahead_candles": 14,
+    "profit_threshold": 8.0,
+    "loss_threshold": 5.0,
+    "hold_time_minutes": 20160
+  }
+}

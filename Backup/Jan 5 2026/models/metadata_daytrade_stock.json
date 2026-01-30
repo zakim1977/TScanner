@@ -1,0 +1,60 @@
+{
+  "mode": "daytrade",
+  "asset_type": "stock",
+  "trained_at": "2026-01-03T14:49:25.333216",
+  "is_real_ml": true,
+  "model_type": "stock_specific",
+  "feature_names": [
+    "rsi",
+    "rsi_oversold",
+    "rsi_overbought",
+    "rsi_neutral",
+    "trend",
+    "trend_bullish",
+    "trend_bearish",
+    "atr_pct",
+    "bb_squeeze_pct",
+    "bb_width_pct",
+    "price_change_short",
+    "price_change_medium",
+    "price_change_long",
+    "volume_ratio",
+    "volume_trend",
+    "above_sma20",
+    "above_sma50",
+    "above_sma200",
+    "macd_signal",
+    "macd_histogram",
+    "position_pct",
+    "near_support",
+    "near_resistance",
+    "momentum_5",
+    "momentum_20",
+    "volatility_rank",
+    "volume_rank",
+    "congress_score",
+    "insider_score",
+    "short_interest",
+    "institutional_diff"
+  ],
+  "n_features": 31,
+  "metrics": {
+    "direction_f1": 0.7376816067247558,
+    "direction_accuracy": 0.7386142467886337,
+    "eta_mae": 4.6289281598845715,
+    "sl_mae": 0.3040524083595008,
+    "n_samples": 25689,
+    "label_distribution": {
+      "SHORT": 7018,
+      "WAIT": 11327,
+      "LONG": 7344
+    }
+  },
+  "config": {
+    "interval": "15m",
+    "period": "60d",
+    "lookahead_candles": 16,
+    "profit_threshold": 1.0,
+    "loss_threshold": 0.7
+  }
+}

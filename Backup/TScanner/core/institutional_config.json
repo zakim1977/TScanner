@@ -1,0 +1,348 @@
+{
+  "_readme": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+  "_readme2": "INVESTORIQ - SINGLE SOURCE OF TRUTH FOR ALL INSTITUTIONAL ANALYSIS",
+  "_readme3": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+  "_readme4": "Edit this file to change ANY threshold, scenario, or education content.",
+  "_readme5": "NO CODE CHANGES NEEDED - everything reads from here.",
+  "version": "3.0.0",
+  "last_updated": "2025-12-21",
+  "thresholds": {
+    "oi_change": {
+      "rising": 0.5,
+      "falling": -0.5,
+      "strong_rising": 3.0,
+      "strong_falling": -3.0
+    },
+    "price_change": {
+      "up": 0.0,
+      "down": 0.0,
+      "strong_up": 2.0,
+      "strong_down": -2.0
+    },
+    "whale_positioning": {
+      "bullish": 55.0,
+      "bearish": 45.0,
+      "strong_bullish": 60.0,
+      "strong_bearish": 40.0
+    },
+    "retail_positioning": {
+      "bullish": 55.0,
+      "bearish": 45.0,
+      "extreme_bullish": 65.0,
+      "extreme_bearish": 35.0
+    },
+    "funding_rate": {
+      "longs_overleveraged": 0.0005,
+      "shorts_overleveraged": -0.0005,
+      "neutral_band": 0.0001
+    }
+  },
+  "oi_price_patterns": {
+    "NEW_LONGS": {
+      "signal": "BULLISH",
+      "meaning": "New money entering LONG positions",
+      "strength": "STRONG"
+    },
+    "NEW_SHORTS": {
+      "signal": "BEARISH",
+      "meaning": "New money entering SHORT positions",
+      "strength": "STRONG"
+    },
+    "SHORT_COVERING": {
+      "signal": "WEAK_BULLISH",
+      "meaning": "Shorts closing, NOT new longs entering",
+      "strength": "WEAK"
+    },
+    "LONG_LIQUIDATION": {
+      "signal": "WEAK_BEARISH",
+      "meaning": "Longs closing/liquidated",
+      "strength": "WEAK"
+    },
+    "NEUTRAL": {
+      "signal": "NEUTRAL",
+      "meaning": "No significant position changes",
+      "strength": "NONE"
+    }
+  },
+  "scenarios": {
+    "SHORT_SQUEEZE": {
+      "name": "Short Squeeze Setup",
+      "emoji": "\ud83d\ude80",
+      "required": {
+        "funding_signal": "SHORTS_OVERLEVERAGED",
+        "whale_bias": "BULLISH"
+      },
+      "confidence": "HIGH",
+      "direction": "LONG",
+      "status": "READY",
+      "score": 90,
+      "conditions_text": "Funding Very Negative + Whales Bullish",
+      "interpretation": "Shorts paying high funding (crowded). Whales long while retail is short. Squeeze imminent.",
+      "recommendation": "LONG now with tight stop. Target 5-10% move.",
+      "education": "When shorts pay high funding AND whales are opposite, shorts become fuel for explosive upside."
+    },
+    "NEW_LONGS_WHALE_BULLISH": {
+      "name": "New Longs + Whale Bullish",
+      "emoji": "\ud83d\udfe2",
+      "required": {
+        "oi_price_pattern": "NEW_LONGS",
+        "whale_bias": "BULLISH"
+      },
+      "confidence": "HIGH",
+      "direction": "LONG",
+      "status": "READY",
+      "score": 85,
+      "conditions_text": "OI Rising + Price Rising + Whales >= 55% Long",
+      "interpretation": "Fresh buying WITH whale confirmation. Strong conviction setup.",
+      "recommendation": "Enter LONG on pullbacks. Stop below recent swing low.",
+      "education": "Ideal bullish scenario - new positions + institutional confirmation."
+    },
+    "NEW_LONGS_NEUTRAL_WHALES": {
+      "name": "New Longs Entering",
+      "emoji": "\ud83d\udfe2",
+      "required": {
+        "oi_price_pattern": "NEW_LONGS"
+      },
+      "excluded": {
+        "whale_bias": "BEARISH"
+      },
+      "confidence": "MEDIUM",
+      "direction": "LONG",
+      "status": "READY",
+      "score": 65,
+      "conditions_text": "OI Rising + Price Rising + Whales Neutral",
+      "interpretation": "Fresh buying but whales neutral. Valid signal, less conviction.",
+      "recommendation": "LONG with smaller position. Add if whales turn bullish.",
+      "education": "OI+Price signal valid but without whale confirmation - smaller size."
+    },
+    "LONG_SQUEEZE": {
+      "name": "Long Squeeze Setup",
+      "emoji": "\ud83d\udca5",
+      "required": {
+        "funding_signal": "LONGS_OVERLEVERAGED",
+        "whale_bias": "BEARISH"
+      },
+      "confidence": "HIGH",
+      "direction": "SHORT",
+      "status": "READY",
+      "score": 90,
+      "conditions_text": "Funding Very Positive + Whales Bearish",
+      "interpretation": "Longs paying high funding (crowded). Whales short. Dump imminent.",
+      "recommendation": "SHORT now with tight stop. Target 5-10% move.",
+      "education": "When longs pay high funding AND whales are opposite, longs become fuel for violent downside."
+    },
+    "NEW_SHORTS_WHALE_BEARISH": {
+      "name": "New Shorts + Whale Bearish",
+      "emoji": "\ud83d\udd34",
+      "required": {
+        "oi_price_pattern": "NEW_SHORTS",
+        "whale_bias": "BEARISH"
+      },
+      "confidence": "HIGH",
+      "direction": "SHORT",
+      "status": "READY",
+      "score": 85,
+      "conditions_text": "OI Rising + Price Falling + Whales <= 45% Long",
+      "interpretation": "Fresh selling WITH whale confirmation. Strong conviction setup.",
+      "recommendation": "Enter SHORT on bounces. Stop above recent swing high.",
+      "education": "Ideal bearish scenario - new positions + institutional confirmation."
+    },
+    "NEW_SHORTS_NEUTRAL_WHALES": {
+      "name": "New Shorts Entering",
+      "emoji": "\ud83d\udd34",
+      "required": {
+        "oi_price_pattern": "NEW_SHORTS"
+      },
+      "excluded": {
+        "whale_bias": "BULLISH"
+      },
+      "confidence": "MEDIUM",
+      "direction": "SHORT",
+      "status": "READY",
+      "score": 65,
+      "conditions_text": "OI Rising + Price Falling + Whales Neutral",
+      "interpretation": "Fresh selling but whales neutral. Valid signal, less conviction.",
+      "recommendation": "SHORT with smaller position. Add if whales turn bearish.",
+      "education": "OI+Price signal valid but without whale confirmation - smaller size."
+    },
+    "LONG_LIQUIDATION_WHALE_BULLISH": {
+      "name": "Whale Accumulation Zone",
+      "emoji": "\ud83d\udfe1",
+      "required": {
+        "oi_price_pattern": "LONG_LIQUIDATION",
+        "whale_bias": "BULLISH"
+      },
+      "confidence": "MEDIUM",
+      "direction": "LONG",
+      "status": "WAIT",
+      "score": 65,
+      "conditions_text": "OI Falling + Price Falling + Whales >= 55% Long",
+      "interpretation": "Retail longs liquidated while whales accumulate. Wealth transfer in progress.",
+      "recommendation": "DON'T catch knife. WAIT for stabilization, then LONG.",
+      "wait_for": [
+        "Price stops making new lows",
+        "Volume spike on green candle",
+        "OI starts rising"
+      ],
+      "education": "Selling now = selling to whales at bottom. Wait for liquidations to finish."
+    },
+    "SHORT_COVERING_WHALE_BEARISH": {
+      "name": "Weak Rally - Distribution",
+      "emoji": "\ud83d\udfe1",
+      "required": {
+        "oi_price_pattern": "SHORT_COVERING",
+        "whale_bias": "BEARISH"
+      },
+      "confidence": "MEDIUM",
+      "direction": "SHORT",
+      "status": "WAIT",
+      "score": 65,
+      "conditions_text": "OI Falling + Price Rising + Whales <= 45% Long",
+      "interpretation": "Rally is just short covering. Whales selling into it.",
+      "recommendation": "DON'T short immediately. WAIT for exhaustion, then SHORT.",
+      "wait_for": [
+        "Price stops making new highs",
+        "Volume fading",
+        "OI starts rising"
+      ],
+      "education": "Retail sees rally and buys. Whales selling to them. Classic distribution."
+    },
+    "SHORT_COVERING_NEUTRAL": {
+      "name": "Short Covering Rally",
+      "emoji": "\ud83d\udfe1",
+      "required": {
+        "oi_price_pattern": "SHORT_COVERING"
+      },
+      "confidence": "LOW",
+      "direction": "NEUTRAL",
+      "status": "WAIT",
+      "score": 45,
+      "conditions_text": "OI Falling + Price Rising",
+      "interpretation": "Rally from short covering. Direction unclear.",
+      "recommendation": "Wait for new positions to enter before taking direction.",
+      "education": "Short covering rallies can be traps. Stay cautious."
+    },
+    "LONG_LIQUIDATION_NEUTRAL": {
+      "name": "Long Liquidation Cascade",
+      "emoji": "\ud83d\udfe1",
+      "required": {
+        "oi_price_pattern": "LONG_LIQUIDATION"
+      },
+      "excluded": {
+        "whale_bias": "BULLISH"
+      },
+      "confidence": "LOW",
+      "direction": "NEUTRAL",
+      "status": "WAIT",
+      "score": 45,
+      "conditions_text": "OI Falling + Price Falling",
+      "interpretation": "Longs liquidated, no whale support. Could continue or reverse.",
+      "recommendation": "Stay out until direction clear.",
+      "education": "Forced selling without whale buying - don't catch the knife."
+    },
+    "CONFLICTING_SIGNALS": {
+      "name": "Conflicting Signals",
+      "emoji": "\u26a0\ufe0f",
+      "required": {
+        "conflict": true
+      },
+      "confidence": "LOW",
+      "direction": "NEUTRAL",
+      "status": "CONFLICTING",
+      "score": 40,
+      "conditions_text": "OI/Price and Whales disagree",
+      "interpretation": "New positions vs whale positioning. Someone is wrong.",
+      "recommendation": "Small position or wait. Whales win ~60% of conflicts.",
+      "education": "When signals conflict, smart money is often early. Wait or follow whales."
+    },
+    "NO_EDGE": {
+      "name": "No Clear Edge",
+      "emoji": "\u26aa",
+      "required": {},
+      "confidence": "LOW",
+      "direction": "NEUTRAL",
+      "status": "AVOID",
+      "score": 50,
+      "conditions_text": "All metrics neutral (45-55%)",
+      "interpretation": "All metrics neutral. No conviction either direction.",
+      "recommendation": "Use technical analysis only. Wait for extremes.",
+      "education": "No institutional edge. Range trade or wait for catalyst."
+    },
+    "WHALE_BULLISH_OI_NEUTRAL": {
+      "name": "Whale Bullish (OI Stable)",
+      "emoji": "\ud83d\udfe2",
+      "required": {
+        "oi_price_pattern": "NEUTRAL",
+        "whale_bias": "BULLISH"
+      },
+      "confidence": "MEDIUM",
+      "direction": "LONG",
+      "status": "WAIT",
+      "score": 60,
+      "description": "Whales positioned long, waiting for OI confirmation",
+      "action": "Cautious long with OI confirmation, tight stops",
+      "education": "Whales are bullish but no new money entering yet. Could be accumulation before a move."
+    },
+    "WHALE_BEARISH_OI_NEUTRAL": {
+      "name": "Whale Bearish (OI Stable)",
+      "emoji": "\ud83d\udd34",
+      "required": {
+        "oi_price_pattern": "NEUTRAL",
+        "whale_bias": "BEARISH"
+      },
+      "confidence": "MEDIUM",
+      "direction": "SHORT",
+      "status": "WAIT",
+      "score": 40,
+      "description": "Whales positioned short, waiting for OI confirmation",
+      "action": "Cautious short with OI confirmation, tight stops",
+      "education": "Whales are bearish but no new shorts entering yet. Could be distribution before a drop."
+    }
+  },
+  "scenario_priority": [
+    "SHORT_SQUEEZE",
+    "LONG_SQUEEZE",
+    "NEW_LONGS_WHALE_BULLISH",
+    "NEW_SHORTS_WHALE_BEARISH",
+    "LONG_LIQUIDATION_WHALE_BULLISH",
+    "SHORT_COVERING_WHALE_BEARISH",
+    "NEW_LONGS_NEUTRAL_WHALES",
+    "NEW_SHORTS_NEUTRAL_WHALES",
+    "SHORT_COVERING_NEUTRAL",
+    "LONG_LIQUIDATION_NEUTRAL",
+    "WHALE_BULLISH_OI_NEUTRAL",
+    "WHALE_BEARISH_OI_NEUTRAL",
+    "CONFLICTING_SIGNALS",
+    "NO_EDGE"
+  ],
+  "metric_education": {
+    "oi_change": {
+      "name": "Open Interest",
+      "icon": "\ud83d\udcca",
+      "what": "Total number of open futures contracts",
+      "why_matters": "Shows if NEW money entering or positions closing",
+      "edge": "OI + Price together reveal WHO is entering/exiting"
+    },
+    "funding_rate": {
+      "name": "Funding Rate",
+      "icon": "\ud83d\udcb0",
+      "what": "Fee paid between longs and shorts",
+      "why_matters": "Shows which side is crowded",
+      "edge": "Extreme funding = contrarian opportunity"
+    },
+    "whale_positioning": {
+      "name": "Top Trader Positioning",
+      "icon": "\ud83d\udc0b",
+      "what": "Position of top 20% traders by size",
+      "why_matters": "Smart money tends to be right",
+      "edge": "Following whales improves win rate"
+    },
+    "retail_positioning": {
+      "name": "Retail Positioning",
+      "icon": "\ud83d\udc11",
+      "what": "Position of bottom 80% traders",
+      "why_matters": "Retail often wrong at extremes",
+      "edge": "Fade retail at extremes"
+    }
+  }
+}

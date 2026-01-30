@@ -1,0 +1,107 @@
+{
+  "version": "v20251228_021800",
+  "best_model": "LightGBM",
+  "cv_accuracy": 0.7978550703558105,
+  "test_accuracy": 0.7953991960329803,
+  "f1_score": 0.7351589502069961,
+  "auc_score": 0.8773342772222579,
+  "combined_score": 0.7925270047158433,
+  "feature_names": [
+    "whale_pct",
+    "retail_pct",
+    "whale_retail_divergence",
+    "whale_dominance",
+    "funding_rate",
+    "oi_change_24h",
+    "oi_signal_encoded",
+    "price_change_24h",
+    "price_change_1h",
+    "position_in_range",
+    "position_label_encoded",
+    "range_size_pct",
+    "ta_score",
+    "rsi",
+    "rsi_zone_encoded",
+    "trend_encoded",
+    "volatility_pct",
+    "money_flow_encoded",
+    "volume_ratio",
+    "at_bullish_ob",
+    "at_bearish_ob",
+    "near_support",
+    "near_resistance",
+    "btc_correlation",
+    "btc_trend_encoded",
+    "market_fear_greed",
+    "is_weekend",
+    "historical_win_rate",
+    "similar_setup_count",
+    "avg_historical_return"
+  ],
+  "all_models_tested": [
+    {
+      "name": "LightGBM",
+      "cv_mean": 0.7978550703558105,
+      "accuracy": 0.7953991960329803,
+      "f1": 0.7351589502069961,
+      "score": 0.7925270047158433
+    },
+    {
+      "name": "XGBoost",
+      "cv_mean": 0.797921085563445,
+      "accuracy": 0.7947536750682198,
+      "f1": 0.7336151414753037,
+      "score": 0.7920193372487301
+    },
+    {
+      "name": "GradientBoosting",
+      "cv_mean": 0.7974076008253199,
+      "accuracy": 0.7940788122414248,
+      "f1": 0.7318918092909535,
+      "score": 0.7911683975835646
+    },
+    {
+      "name": "CatBoost",
+      "cv_mean": 0.7968134227917785,
+      "accuracy": 0.7932572401044571,
+      "f1": 0.7301623774509803,
+      "score": 0.7902829816781765
+    },
+    {
+      "name": "RandomForest",
+      "cv_mean": 0.7888544028936132,
+      "accuracy": 0.7846894163903642,
+      "f1": 0.7095241865252158,
+      "score": 0.7793793988308731
+    },
+    {
+      "name": "AdaBoost",
+      "cv_mean": 0.7779757747920988,
+      "accuracy": 0.7682873155130424,
+      "f1": 0.676657249314171,
+      "score": 0.761193655933771
+    },
+    {
+      "name": "KNN",
+      "cv_mean": 0.7673172986356306,
+      "accuracy": 0.7638860362078578,
+      "f1": 0.6900111714626912,
+      "score": 0.7572122094395
+    },
+    {
+      "name": "ExtraTrees",
+      "cv_mean": 0.7623364919405177,
+      "accuracy": 0.7598368592470878,
+      "f1": 0.6483955496370118,
+      "score": 0.7446251069218557
+    },
+    {
+      "name": "LogisticRegression",
+      "cv_mean": 0.7450980253041569,
+      "accuracy": 0.7381532232035445,
+      "f1": 0.6293096286450112,
+      "score": 0.7242374264929836
+    }
+  ],
+  "trained_at": "2025-12-28T02:18:00.271395"
+}

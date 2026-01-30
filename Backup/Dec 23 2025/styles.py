@@ -1,0 +1,396 @@
+"""
+CSS Styles for Crypto Scanner Pro
+Dark theme with proper contrast
+"""
+
+import streamlit as st
+
+def apply_custom_css():
+    """Apply custom CSS styling to the app"""
+    
+    st.markdown("""
+<style>
+    /* ══════════════════════════════════════════════════════════════════════
+       GLOBAL: Dark backgrounds everywhere in main area
+       ══════════════════════════════════════════════════════════════════════ */
+    .stApp {
+        background-color: #0e1117 !important;
+    }
+    
+    .main .block-container {
+        background-color: #0e1117 !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       ALL TEXT IN MAIN = WHITE (nuclear option)
+       ══════════════════════════════════════════════════════════════════════ */
+    .main, 
+    .main *,
+    .main p, .main span, .main div, .main label,
+    .main h1, .main h2, .main h3, .main h4, .main h5, .main h6,
+    .main li, .main strong, .main b, .main em, .main i,
+    .main td, .main th, .main code, .main pre, .main a,
+    .block-container, .block-container *,
+    .element-container, .element-container *,
+    [data-testid="stMarkdownContainer"], [data-testid="stMarkdownContainer"] *,
+    [data-testid="stVerticalBlock"], [data-testid="stVerticalBlock"] *,
+    [data-testid="stMetric"], [data-testid="stMetric"] *,
+    [data-testid="stMetricLabel"], [data-testid="stMetricLabel"] * {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+    }
+    
+    /* Metric values - cyan */
+    [data-testid="stMetricValue"] {
+        color: #00d4ff !important;
+        -webkit-text-fill-color: #00d4ff !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       EXPANDERS - Force dark background + white text
+       ══════════════════════════════════════════════════════════════════════ */
+    
+    /* Expander container */
+    [data-testid="stExpander"] {
+        background-color: #1a1a2e !important;
+        border: 1px solid #333 !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Expander header/summary */
+    [data-testid="stExpander"] > details > summary,
+    [data-testid="stExpander"] summary,
+    .streamlit-expanderHeader {
+        background-color: #1a1a2e !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        padding: 12px !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Everything inside expander header */
+    [data-testid="stExpander"] > details > summary *,
+    [data-testid="stExpander"] summary *,
+    [data-testid="stExpander"] summary span,
+    [data-testid="stExpander"] summary p,
+    [data-testid="stExpander"] summary div,
+    .streamlit-expanderHeader * {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        background-color: transparent !important;
+    }
+    
+    /* Expander content/body */
+    [data-testid="stExpander"] > details > div[data-testid="stExpanderDetails"],
+    [data-testid="stExpander"] [data-testid="stExpanderDetails"],
+    [data-testid="stExpanderDetails"] {
+        background-color: #0e1117 !important;
+        border-top: 1px solid #333 !important;
+    }
+    
+    /* Hover state */
+    [data-testid="stExpander"] summary:hover {
+        background-color: #252540 !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       PROGRESS BAR
+       ══════════════════════════════════════════════════════════════════════ */
+    [data-testid="stProgress"] > div {
+        background-color: #1a1a2e !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       BUTTONS - Simple Rule: White bg = Black text, Dark bg = White text
+       ══════════════════════════════════════════════════════════════════════ */
+    
+    /* Default: Force dark background + white text */
+    .main button,
+    .main [data-testid="baseButton-secondary"],
+    .main [data-testid="baseButton-primary"],
+    .main [data-baseweb="button"],
+    .main .stButton > button {
+        background-color: #1a1a2e !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        border: 1px solid #444 !important;
+    }
+    
+    .main button *,
+    .main [data-baseweb="button"] * {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+    }
+    
+    /* OVERRIDE: Any button/element with white/light background = BLACK text */
+    button[style*="background-color: white"],
+    button[style*="background-color: rgb(255"],
+    button[style*="background: white"],
+    button[style*="background: rgb(255"],
+    [style*="background-color: white"],
+    [style*="background-color: rgb(255, 255, 255)"],
+    [style*="background: white"],
+    [style*="background: rgb(255"] {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    /* Streamlit's default button styles - catch all variations */
+    [data-baseweb="button"][kind="secondary"],
+    [data-baseweb="button"][kind="tertiary"],
+    button[kind="secondary"],
+    button[kind="tertiary"] {
+        background-color: #1a1a2e !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+    }
+    
+    /* Primary buttons - keep distinct color */
+    [data-baseweb="button"][kind="primary"],
+    button[kind="primary"],
+    .main [data-testid="baseButton-primary"] {
+        background-color: #00d4ff !important;
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    /* Hover states */
+    .main button:hover {
+        background-color: #252540 !important;
+        border-color: #00d4ff !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       UNIVERSAL CONTRAST RULE: Any light background = Dark text
+       ══════════════════════════════════════════════════════════════════════ */
+    
+    /* White backgrounds need black text */
+    .main [style*="background-color: white"] *,
+    .main [style*="background-color: #fff"] *,
+    .main [style*="background-color: rgb(255, 255, 255)"] *,
+    .main [style*="background: white"] *,
+    .main [style*="background: #fff"] * {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       SIDEBAR - BLACK TEXT (light background)
+       ══════════════════════════════════════════════════════════════════════ */
+    section[data-testid="stSidebar"],
+    section[data-testid="stSidebar"] *,
+    [data-testid="stSidebar"],
+    [data-testid="stSidebar"] * {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       ALERT/INFO/SUCCESS/WARNING/ERROR BOXES - Light bg, dark text
+       ══════════════════════════════════════════════════════════════════════ */
+    
+    [data-testid="stAlert"],
+    [data-baseweb="notification"],
+    [role="alert"] {
+        background-color: #f0f2f6 !important;
+        border-radius: 8px !important;
+    }
+    
+    [data-testid="stAlert"] *,
+    [data-testid="stAlert"] p,
+    [data-testid="stAlert"] span,
+    [data-testid="stAlert"] div,
+    [data-testid="stAlert"] li,
+    [data-baseweb="notification"] *,
+    [role="alert"] * {
+        color: #1a1a1a !important;
+        -webkit-text-fill-color: #1a1a1a !important;
+        background-color: transparent !important;
+    }
+    
+    /* Success - green */
+    [data-testid="stAlert"][data-baseweb*="positive"] {
+        background-color: #d4edda !important;
+        border-left: 4px solid #28a745 !important;
+    }
+    
+    /* Warning - yellow */
+    [data-testid="stAlert"][data-baseweb*="warning"] {
+        background-color: #fff3cd !important;
+        border-left: 4px solid #ffc107 !important;
+    }
+    
+    /* Info - blue */
+    [data-testid="stAlert"][data-baseweb*="info"] {
+        background-color: #d1ecf1 !important;
+        border-left: 4px solid #17a2b8 !important;
+    }
+    
+    /* Error - red */
+    [data-testid="stAlert"][data-baseweb*="negative"] {
+        background-color: #f8d7da !important;
+        border-left: 4px solid #dc3545 !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       TABLES - White text on dark
+       ══════════════════════════════════════════════════════════════════════ */
+    .main table, .main table *,
+    .main thead, .main thead *,
+    .main tbody, .main tbody *,
+    .main th, .main td {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        background-color: transparent !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       INPUT FIELDS in main area
+       ══════════════════════════════════════════════════════════════════════ */
+    .main input, .main textarea, .main select {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        background-color: #1a1a2e !important;
+        border: 1px solid #444 !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       CAPTIONS - dimmer white
+       ══════════════════════════════════════════════════════════════════════ */
+    .main .stCaption, .main caption, .main small,
+    [data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] * {
+        color: #aaaaaa !important;
+        -webkit-text-fill-color: #aaaaaa !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       DIVIDERS/SEPARATORS
+       ══════════════════════════════════════════════════════════════════════ */
+    .main hr {
+        border-color: #333 !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       COLUMNS - ensure dark bg
+       ══════════════════════════════════════════════════════════════════════ */
+    [data-testid="column"] {
+        background-color: transparent !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       PLOTLY CHARTS - ensure proper colors
+       ══════════════════════════════════════════════════════════════════════ */
+    .js-plotly-plot, .plotly {
+        background-color: transparent !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       🔴 FINAL OVERRIDE: ALL BUTTONS - Nuclear Option
+       ══════════════════════════════════════════════════════════════════════ */
+    
+    .stButton button,
+    .stButton > button,
+    div.stButton > button,
+    [data-testid="stButton"] button,
+    [data-testid="baseButton-secondary"],
+    [data-testid="baseButton-primary"],
+    [data-testid="baseButton-minimal"],
+    button[data-testid],
+    button[kind],
+    [data-baseweb="button"],
+    .main button {
+        background-color: #1e2130 !important;
+        background: #1e2130 !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        border: 1px solid #444 !important;
+    }
+    
+    .stButton button *,
+    .stButton > button *,
+    div.stButton > button *,
+    [data-baseweb="button"] *,
+    [data-baseweb="button"] span,
+    [data-baseweb="button"] p,
+    button span,
+    button p,
+    button div {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        background-color: transparent !important;
+        background: transparent !important;
+    }
+    
+    button[kind="primary"],
+    [data-testid="baseButton-primary"],
+    .stButton button[kind="primary"] {
+        background-color: #00d4ff !important;
+        background: #00d4ff !important;
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    button[kind="primary"] *,
+    [data-testid="baseButton-primary"] * {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    /* ══════════════════════════════════════════════════════════════════════
+       🔴 UNIVERSAL CONTRAST LAW
+       ══════════════════════════════════════════════════════════════════════ */
+    
+    *[style*="background-color: white"],
+    *[style*="background-color: #fff"],
+    *[style*="background-color: rgb(255"],
+    *[style*="background: white"],
+    *[style*="background: #fff"],
+    *[style*="background: rgb(255"] {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    *[style*="background-color: white"] *,
+    *[style*="background-color: #fff"] *,
+    *[style*="background-color: rgb(255"] *,
+    *[style*="background: white"] *,
+    *[style*="background: #fff"] *,
+    *[style*="background: rgb(255"] * {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+</style>
+
+<script>
+// 🔴 NUCLEAR OPTION: Force button styling via JavaScript
+function fixButtonContrast() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(btn => {
+        const style = window.getComputedStyle(btn);
+        const bgColor = style.backgroundColor;
+        const rgb = bgColor.match(/[0-9]+/g);
+        if (rgb) {
+            const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
+            if (brightness > 128) {
+                btn.style.setProperty('color', '#000000', 'important');
+                btn.style.setProperty('-webkit-text-fill-color', '#000000', 'important');
+                btn.querySelectorAll('*').forEach(child => {
+                    child.style.setProperty('color', '#000000', 'important');
+                    child.style.setProperty('-webkit-text-fill-color', '#000000', 'important');
+                });
+            } else {
+                btn.style.setProperty('color', '#ffffff', 'important');
+                btn.style.setProperty('-webkit-text-fill-color', '#ffffff', 'important');
+                btn.querySelectorAll('*').forEach(child => {
+                    child.style.setProperty('color', '#ffffff', 'important');
+                    child.style.setProperty('-webkit-text-fill-color', '#ffffff', 'important');
+                });
+            }
+        }
+    });
+}
+document.addEventListener('DOMContentLoaded', fixButtonContrast);
+setInterval(fixButtonContrast, 1000);
+</script>
+""", unsafe_allow_html=True)

@@ -1,0 +1,478 @@
+2026-01-11 14:20:49,496 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-7615' coro=<WebSocketProtocol13.write_message.<locals>.wrapper() done, defined at C:\Users\zakim\AppData\Local\miniconda3\envs\py311\Lib\site-packages\tornado\websocket.py:1111> exception=WebSocketClosedError()>
+Traceback (most recent call last):
+  File "C:\Users\zakim\AppData\Local\miniconda3\envs\py311\Lib\site-packages\tornado\websocket.py", line 1113, in wrapper
+    await fut
+tornado.iostream.StreamClosedError: Stream is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\zakim\AppData\Local\miniconda3\envs\py311\Lib\site-packages\tornado\websocket.py", line 1115, in wrapper
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+2026-01-11 22:11:58,845 | ERROR | 
+1 Failed download:
+2026-01-11 22:11:58,846 | ERROR | ['AAPL']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:12:04,720 | ERROR | 
+1 Failed download:
+2026-01-11 22:12:04,720 | ERROR | ['MSFT']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:12:10,516 | ERROR | 
+1 Failed download:
+2026-01-11 22:12:10,516 | ERROR | ['GOOGL']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:12:16,247 | ERROR | Failed to get ticker 'GOOG' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:12:16,717 | ERROR | 
+1 Failed download:
+2026-01-11 22:12:16,717 | ERROR | ['GOOG']: CertificateVerifyError('Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')
+2026-01-11 22:12:56,009 | ERROR | 
+1 Failed download:
+2026-01-11 22:12:56,009 | ERROR | ['META']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:13:01,787 | ERROR | 
+1 Failed download:
+2026-01-11 22:13:01,787 | ERROR | ['NVDA']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:13:07,759 | ERROR | 
+1 Failed download:
+2026-01-11 22:13:07,759 | ERROR | ['TSLA']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:13:13,409 | ERROR | 
+1 Failed download:
+2026-01-11 22:13:13,409 | ERROR | ['AVGO']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:13:18,895 | ERROR | 
+1 Failed download:
+2026-01-11 22:13:18,895 | ERROR | ['ORCL']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:13:24,379 | ERROR | 
+1 Failed download:
+2026-01-11 22:13:24,379 | ERROR | ['CRM']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:13:30,320 | ERROR | 
+1 Failed download:
+2026-01-11 22:13:30,320 | ERROR | ['ADBE']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:14:10,780 | ERROR | Failed to get ticker 'ACN' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:14:11,301 | ERROR | 
+1 Failed download:
+2026-01-11 22:14:11,301 | ERROR | ['ACN']: CertificateVerifyError('Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')
+2026-01-11 22:14:17,530 | ERROR | Failed to get ticker 'IBM' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:14:17,530 | ERROR | $IBM: possibly delisted; no timezone found
+2026-01-11 22:14:17,531 | ERROR | 
+1 Failed download:
+2026-01-11 22:14:17,531 | ERROR | ['IBM']: possibly delisted; no timezone found
+2026-01-11 22:14:24,245 | ERROR | 
+1 Failed download:
+2026-01-11 22:14:24,245 | ERROR | ['INTC']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:14:35,350 | ERROR | 
+1 Failed download:
+2026-01-11 22:14:35,350 | ERROR | ['AMD']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:14:40,951 | ERROR | 
+1 Failed download:
+2026-01-11 22:14:40,951 | ERROR | ['JPM']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:14:46,412 | ERROR | 
+1 Failed download:
+2026-01-11 22:14:46,412 | ERROR | ['BAC']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:14:52,344 | ERROR | Failed to get ticker 'WFC' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:14:52,345 | ERROR | $WFC: possibly delisted; no timezone found
+2026-01-11 22:14:52,348 | ERROR | 
+1 Failed download:
+2026-01-11 22:14:52,348 | ERROR | ['WFC']: possibly delisted; no timezone found
+2026-01-11 22:14:57,775 | ERROR | 
+1 Failed download:
+2026-01-11 22:14:57,775 | ERROR | ['GS']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:15:03,803 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:03,803 | ERROR | ['MS']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:15:09,334 | ERROR | Failed to get ticker 'C' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:15:09,335 | ERROR | $C: possibly delisted; no timezone found
+2026-01-11 22:15:09,337 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:09,337 | ERROR | ['C']: possibly delisted; no timezone found
+2026-01-11 22:15:15,547 | ERROR | Failed to get ticker 'BLK' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:15:15,548 | ERROR | $BLK: possibly delisted; no timezone found
+2026-01-11 22:15:15,554 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:15,554 | ERROR | ['BLK']: possibly delisted; no timezone found
+2026-01-11 22:15:21,076 | ERROR | Failed to get ticker 'SCHW' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:15:21,077 | ERROR | $SCHW: possibly delisted; no timezone found
+2026-01-11 22:15:21,079 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:21,079 | ERROR | ['SCHW']: possibly delisted; no timezone found
+2026-01-11 22:15:26,503 | ERROR | Failed to get ticker 'AXP' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:15:26,504 | ERROR | $AXP: possibly delisted; no timezone found
+2026-01-11 22:15:26,510 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:26,510 | ERROR | ['AXP']: possibly delisted; no timezone found
+2026-01-11 22:15:32,863 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:32,863 | ERROR | ['V']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:15:38,329 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:38,329 | ERROR | ['MA']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:15:44,438 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:44,438 | ERROR | ['PYPL']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:15:49,847 | ERROR | Failed to get ticker 'COF' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:15:49,847 | ERROR | $COF: possibly delisted; no timezone found
+2026-01-11 22:15:49,851 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:49,851 | ERROR | ['COF']: possibly delisted; no timezone found
+2026-01-11 22:15:55,311 | ERROR | Failed to get ticker 'USB' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:15:55,312 | ERROR | $USB: possibly delisted; no timezone found
+2026-01-11 22:15:55,313 | ERROR | 
+1 Failed download:
+2026-01-11 22:15:55,313 | ERROR | ['USB']: possibly delisted; no timezone found
+2026-01-11 22:16:01,015 | ERROR | 
+1 Failed download:
+2026-01-11 22:16:01,015 | ERROR | ['JNJ']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:16:06,557 | ERROR | 
+1 Failed download:
+2026-01-11 22:16:06,557 | ERROR | ['UNH']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:16:12,097 | ERROR | 
+1 Failed download:
+2026-01-11 22:16:12,097 | ERROR | ['PFE']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:16:17,767 | ERROR | 
+1 Failed download:
+2026-01-11 22:16:17,767 | ERROR | ['ABBV']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:16:23,350 | ERROR | Failed to get ticker 'MRK' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:16:23,351 | ERROR | $MRK: possibly delisted; no timezone found
+2026-01-11 22:16:23,359 | ERROR | 
+1 Failed download:
+2026-01-11 22:16:23,359 | ERROR | ['MRK']: possibly delisted; no timezone found
+2026-01-11 22:16:28,816 | ERROR | 
+1 Failed download:
+2026-01-11 22:16:28,816 | ERROR | ['LLY']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:16:34,354 | ERROR | Failed to get ticker 'TMO' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:16:34,354 | ERROR | $TMO: possibly delisted; no timezone found
+2026-01-11 22:16:34,362 | ERROR | 
+1 Failed download:
+2026-01-11 22:16:34,362 | ERROR | ['TMO']: possibly delisted; no timezone found
+2026-01-11 22:17:47,459 | ERROR | Failed to get ticker 'BMY' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:17:47,460 | ERROR | $BMY: possibly delisted; no timezone found
+2026-01-11 22:17:47,465 | ERROR | 
+1 Failed download:
+2026-01-11 22:17:47,465 | ERROR | ['BMY']: possibly delisted; no timezone found
+2026-01-11 22:17:52,893 | ERROR | Failed to get ticker 'AMGN' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:17:52,894 | ERROR | $AMGN: possibly delisted; no timezone found
+2026-01-11 22:17:52,897 | ERROR | 
+1 Failed download:
+2026-01-11 22:17:52,897 | ERROR | ['AMGN']: possibly delisted; no timezone found
+2026-01-11 22:17:58,322 | ERROR | Failed to get ticker 'GILD' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:17:58,322 | ERROR | $GILD: possibly delisted; no timezone found
+2026-01-11 22:17:58,324 | ERROR | 
+1 Failed download:
+2026-01-11 22:17:58,324 | ERROR | ['GILD']: possibly delisted; no timezone found
+2026-01-11 22:18:03,942 | ERROR | Failed to get ticker 'CVS' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:18:03,943 | ERROR | $CVS: possibly delisted; no timezone found
+2026-01-11 22:18:03,946 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:03,946 | ERROR | ['CVS']: possibly delisted; no timezone found
+2026-01-11 22:18:10,353 | ERROR | Failed to get ticker 'ISRG' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:18:10,353 | ERROR | $ISRG: possibly delisted; no timezone found
+2026-01-11 22:18:10,360 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:10,360 | ERROR | ['ISRG']: possibly delisted; no timezone found
+2026-01-11 22:18:16,418 | ERROR | Failed to get ticker 'VRTX' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:18:16,418 | ERROR | $VRTX: possibly delisted; no timezone found
+2026-01-11 22:18:16,428 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:16,428 | ERROR | ['VRTX']: possibly delisted; no timezone found
+2026-01-11 22:18:21,954 | ERROR | Failed to get ticker 'REGN' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:18:21,955 | ERROR | $REGN: possibly delisted; no timezone found
+2026-01-11 22:18:21,957 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:21,957 | ERROR | ['REGN']: possibly delisted; no timezone found
+2026-01-11 22:18:27,367 | ERROR | Failed to get ticker 'MRNA' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:18:27,368 | ERROR | $MRNA: possibly delisted; no timezone found
+2026-01-11 22:18:27,378 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:27,378 | ERROR | ['MRNA']: possibly delisted; no timezone found
+2026-01-11 22:18:32,946 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:32,946 | ERROR | ['XOM']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:18:38,399 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:38,399 | ERROR | ['CVX']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:18:43,882 | ERROR | Failed to get ticker 'COP' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:18:43,882 | ERROR | $COP: possibly delisted; no timezone found
+2026-01-11 22:18:43,892 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:43,892 | ERROR | ['COP']: possibly delisted; no timezone found
+2026-01-11 22:18:49,372 | ERROR | Failed to get ticker 'SLB' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:18:49,373 | ERROR | $SLB: possibly delisted; no timezone found
+2026-01-11 22:18:49,378 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:49,378 | ERROR | ['SLB']: possibly delisted; no timezone found
+2026-01-11 22:18:55,940 | ERROR | Failed to get ticker 'EOG' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:18:55,941 | ERROR | $EOG: possibly delisted; no timezone found
+2026-01-11 22:18:55,949 | ERROR | 
+1 Failed download:
+2026-01-11 22:18:55,949 | ERROR | ['EOG']: possibly delisted; no timezone found
+2026-01-11 22:19:05,652 | ERROR | 
+1 Failed download:
+2026-01-11 22:19:05,652 | ERROR | ['OXY']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:19:11,599 | ERROR | Failed to get ticker 'VLO' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:19:11,600 | ERROR | $VLO: possibly delisted; no timezone found
+2026-01-11 22:19:11,601 | ERROR | 
+1 Failed download:
+2026-01-11 22:19:11,601 | ERROR | ['VLO']: possibly delisted; no timezone found
+2026-01-11 22:19:17,564 | ERROR | Failed to get ticker 'PSX' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:19:17,565 | ERROR | $PSX: possibly delisted; no timezone found
+2026-01-11 22:19:17,575 | ERROR | 
+1 Failed download:
+2026-01-11 22:19:17,575 | ERROR | ['PSX']: possibly delisted; no timezone found
+2026-01-11 22:19:22,973 | ERROR | 
+1 Failed download:
+2026-01-11 22:19:22,973 | ERROR | ['WMT']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:19:28,504 | ERROR | 
+1 Failed download:
+2026-01-11 22:19:28,504 | ERROR | ['HD']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:19:34,052 | ERROR | 
+1 Failed download:
+2026-01-11 22:19:34,052 | ERROR | ['COST']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:19:40,386 | ERROR | 
+1 Failed download:
+2026-01-11 22:19:40,386 | ERROR | ['NKE']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:19:48,344 | ERROR | Failed to get ticker 'MCD' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:19:48,345 | ERROR | $MCD: possibly delisted; no timezone found
+2026-01-11 22:19:48,345 | ERROR | 
+1 Failed download:
+2026-01-11 22:19:48,346 | ERROR | ['MCD']: possibly delisted; no timezone found
+2026-01-11 22:19:54,495 | ERROR | 
+1 Failed download:
+2026-01-11 22:19:54,495 | ERROR | ['SBUX']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:20:00,398 | ERROR | Failed to get ticker 'TGT' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:20:00,399 | ERROR | $TGT: possibly delisted; no timezone found
+2026-01-11 22:20:00,403 | ERROR | 
+1 Failed download:
+2026-01-11 22:20:00,403 | ERROR | ['TGT']: possibly delisted; no timezone found
+2026-01-11 22:20:06,006 | ERROR | Failed to get ticker 'LOW' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:20:06,006 | ERROR | $LOW: possibly delisted; no timezone found
+2026-01-11 22:20:06,009 | ERROR | 
+1 Failed download:
+2026-01-11 22:20:06,009 | ERROR | ['LOW']: possibly delisted; no timezone found
+2026-01-11 22:20:11,748 | ERROR | Failed to get ticker 'TJX' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:20:11,750 | ERROR | $TJX: possibly delisted; no timezone found
+2026-01-11 22:20:11,750 | ERROR | 
+1 Failed download:
+2026-01-11 22:20:11,751 | ERROR | ['TJX']: possibly delisted; no timezone found
+2026-01-11 22:20:17,506 | ERROR | Failed to get ticker 'PG' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:20:17,506 | ERROR | $PG: possibly delisted; no timezone found
+2026-01-11 22:20:17,511 | ERROR | 
+1 Failed download:
+2026-01-11 22:20:17,511 | ERROR | ['PG']: possibly delisted; no timezone found
+2026-01-11 22:20:56,792 | ERROR | Failed to get ticker 'PEP' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:20:56,793 | ERROR | $PEP: possibly delisted; no timezone found
+2026-01-11 22:20:56,803 | ERROR | 
+1 Failed download:
+2026-01-11 22:20:56,803 | ERROR | ['PEP']: possibly delisted; no timezone found
+2026-01-11 22:21:02,786 | ERROR | Failed to get ticker 'PM' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:21:02,786 | ERROR | $PM: possibly delisted; no timezone found
+2026-01-11 22:21:02,795 | ERROR | 
+1 Failed download:
+2026-01-11 22:21:02,795 | ERROR | ['PM']: possibly delisted; no timezone found
+2026-01-11 22:21:08,230 | ERROR | Failed to get ticker 'MO' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:21:08,230 | ERROR | $MO: possibly delisted; no timezone found
+2026-01-11 22:21:08,231 | ERROR | 
+1 Failed download:
+2026-01-11 22:21:08,231 | ERROR | ['MO']: possibly delisted; no timezone found
+2026-01-11 22:21:13,723 | ERROR | Failed to get ticker 'CL' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:21:13,724 | ERROR | $CL: possibly delisted; no timezone found
+2026-01-11 22:21:13,731 | ERROR | 
+1 Failed download:
+2026-01-11 22:21:13,731 | ERROR | ['CL']: possibly delisted; no timezone found
+2026-01-11 22:21:19,202 | ERROR | Failed to get ticker 'EL' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:21:19,203 | ERROR | $EL: possibly delisted; no timezone found
+2026-01-11 22:21:19,212 | ERROR | 
+1 Failed download:
+2026-01-11 22:21:19,212 | ERROR | ['EL']: possibly delisted; no timezone found
+2026-01-11 22:21:24,774 | ERROR | Failed to get ticker 'CAT' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:21:24,774 | ERROR | $CAT: possibly delisted; no timezone found
+2026-01-11 22:21:24,784 | ERROR | 
+1 Failed download:
+2026-01-11 22:21:24,784 | ERROR | ['CAT']: possibly delisted; no timezone found
+2026-01-11 22:21:31,004 | ERROR | Failed to get ticker 'DE' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:21:31,005 | ERROR | $DE: possibly delisted; no timezone found
+2026-01-11 22:21:31,014 | ERROR | 
+1 Failed download:
+2026-01-11 22:21:31,014 | ERROR | ['DE']: possibly delisted; no timezone found
+2026-01-11 22:21:36,673 | ERROR | Failed to get ticker 'BA' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:21:36,674 | ERROR | $BA: possibly delisted; no timezone found
+2026-01-11 22:21:36,681 | ERROR | 
+1 Failed download:
+2026-01-11 22:21:36,681 | ERROR | ['BA']: possibly delisted; no timezone found
+2026-01-11 22:21:42,981 | ERROR | Failed to get ticker 'GE' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:21:42,982 | ERROR | $GE: possibly delisted; no timezone found
+2026-01-11 22:21:42,982 | ERROR | 
+1 Failed download:
+2026-01-11 22:21:42,982 | ERROR | ['GE']: possibly delisted; no timezone found
+2026-01-11 22:21:49,104 | ERROR | Failed to get ticker 'HON' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:21:49,104 | ERROR | $HON: possibly delisted; no timezone found
+2026-01-11 22:21:49,113 | ERROR | 
+1 Failed download:
+2026-01-11 22:21:49,113 | ERROR | ['HON']: possibly delisted; no timezone found
+2026-01-11 22:22:01,393 | ERROR | Failed to get ticker 'UPS' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:22:01,393 | ERROR | $UPS: possibly delisted; no timezone found
+2026-01-11 22:22:01,400 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:01,400 | ERROR | ['UPS']: possibly delisted; no timezone found
+2026-01-11 22:22:06,866 | ERROR | Failed to get ticker 'RTX' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:22:06,867 | ERROR | $RTX: possibly delisted; no timezone found
+2026-01-11 22:22:06,871 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:06,871 | ERROR | ['RTX']: possibly delisted; no timezone found
+2026-01-11 22:22:14,149 | ERROR | Failed to get ticker 'LMT' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:22:14,149 | ERROR | $LMT: possibly delisted; no timezone found
+2026-01-11 22:22:14,157 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:14,157 | ERROR | ['LMT']: possibly delisted; no timezone found
+2026-01-11 22:22:20,342 | ERROR | Failed to get ticker 'NOC' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:22:20,343 | ERROR | $NOC: possibly delisted; no timezone found
+2026-01-11 22:22:20,348 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:20,348 | ERROR | ['NOC']: possibly delisted; no timezone found
+2026-01-11 22:22:25,909 | ERROR | Failed to get ticker 'MMM' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:22:25,911 | ERROR | $MMM: possibly delisted; no timezone found
+2026-01-11 22:22:25,919 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:25,919 | ERROR | ['MMM']: possibly delisted; no timezone found
+2026-01-11 22:22:31,421 | ERROR | Failed to get ticker 'UNP' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:22:31,422 | ERROR | $UNP: possibly delisted; no timezone found
+2026-01-11 22:22:31,427 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:31,427 | ERROR | ['UNP']: possibly delisted; no timezone found
+2026-01-11 22:22:36,970 | ERROR | Failed to get ticker 'FDX' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:22:36,970 | ERROR | $FDX: possibly delisted; no timezone found
+2026-01-11 22:22:36,976 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:36,976 | ERROR | ['FDX']: possibly delisted; no timezone found
+2026-01-11 22:22:42,706 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:42,706 | ERROR | ['DIS']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:22:48,201 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:48,201 | ERROR | ['NFLX']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:22:53,766 | ERROR | Failed to get ticker 'CMCSA' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:22:53,766 | ERROR | $CMCSA: possibly delisted; no timezone found
+2026-01-11 22:22:53,767 | ERROR | 
+1 Failed download:
+2026-01-11 22:22:53,767 | ERROR | ['CMCSA']: possibly delisted; no timezone found
+2026-01-11 22:23:00,164 | ERROR | Failed to get ticker 'T' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:23:00,165 | ERROR | $T: possibly delisted; no timezone found
+2026-01-11 22:23:00,170 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:00,170 | ERROR | ['T']: possibly delisted; no timezone found
+2026-01-11 22:23:05,826 | ERROR | Failed to get ticker 'VZ' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:23:05,826 | ERROR | $VZ: possibly delisted; no timezone found
+2026-01-11 22:23:05,835 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:05,835 | ERROR | ['VZ']: possibly delisted; no timezone found
+2026-01-11 22:23:11,417 | ERROR | Failed to get ticker 'TMUS' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:23:11,417 | ERROR | $TMUS: possibly delisted; no timezone found
+2026-01-11 22:23:11,420 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:11,420 | ERROR | ['TMUS']: possibly delisted; no timezone found
+2026-01-11 22:23:16,882 | ERROR | Failed to get ticker 'CHTR' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:23:16,883 | ERROR | $CHTR: possibly delisted; no timezone found
+2026-01-11 22:23:16,888 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:16,888 | ERROR | ['CHTR']: possibly delisted; no timezone found
+2026-01-11 22:23:22,801 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:22,801 | ERROR | ['TSM']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:23:28,225 | ERROR | Failed to get ticker 'ASML' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:23:28,225 | ERROR | $ASML: possibly delisted; no timezone found
+2026-01-11 22:23:28,234 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:28,234 | ERROR | ['ASML']: possibly delisted; no timezone found
+2026-01-11 22:23:33,711 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:33,711 | ERROR | ['QCOM']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:23:39,278 | ERROR | Failed to get ticker 'TXN' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:23:39,278 | ERROR | $TXN: possibly delisted; no timezone found
+2026-01-11 22:23:39,285 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:39,285 | ERROR | ['TXN']: possibly delisted; no timezone found
+2026-01-11 22:23:44,826 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:44,826 | ERROR | ['MU']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:23:50,411 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:50,411 | ERROR | ['AMAT']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:23:56,609 | ERROR | 
+1 Failed download:
+2026-01-11 22:23:56,609 | ERROR | ['LRCX']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:24:02,537 | ERROR | Failed to get ticker 'KLAC' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:24:02,538 | ERROR | $KLAC: possibly delisted; no timezone found
+2026-01-11 22:24:02,544 | ERROR | 
+1 Failed download:
+2026-01-11 22:24:02,544 | ERROR | ['KLAC']: possibly delisted; no timezone found
+2026-01-11 22:24:08,418 | ERROR | Failed to get ticker 'ADI' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:24:08,418 | ERROR | $ADI: possibly delisted; no timezone found
+2026-01-11 22:24:08,428 | ERROR | 
+1 Failed download:
+2026-01-11 22:24:08,428 | ERROR | ['ADI']: possibly delisted; no timezone found
+2026-01-11 22:24:14,309 | ERROR | 
+1 Failed download:
+2026-01-11 22:24:14,309 | ERROR | ['SPY']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:24:19,699 | ERROR | 
+1 Failed download:
+2026-01-11 22:24:19,699 | ERROR | ['QQQ']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:24:25,127 | ERROR | Failed to get ticker 'IWM' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:24:25,128 | ERROR | $IWM: possibly delisted; no timezone found
+2026-01-11 22:24:25,132 | ERROR | 
+1 Failed download:
+2026-01-11 22:24:25,132 | ERROR | ['IWM']: possibly delisted; no timezone found
+2026-01-11 22:25:13,811 | ERROR | 
+1 Failed download:
+2026-01-11 22:25:13,811 | ERROR | ['SLV']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:25:19,263 | ERROR | Failed to get ticker 'TLT' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:25:19,263 | ERROR | $TLT: possibly delisted; no timezone found
+2026-01-11 22:25:19,265 | ERROR | 
+1 Failed download:
+2026-01-11 22:25:19,265 | ERROR | ['TLT']: possibly delisted; no timezone found
+2026-01-11 22:25:24,674 | ERROR | Failed to get ticker 'HYG' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:25:24,675 | ERROR | $HYG: possibly delisted; no timezone found
+2026-01-11 22:25:24,675 | ERROR | 
+1 Failed download:
+2026-01-11 22:25:24,676 | ERROR | ['HYG']: possibly delisted; no timezone found
+2026-01-11 22:25:30,631 | ERROR | 
+1 Failed download:
+2026-01-11 22:25:30,631 | ERROR | ['PLTR']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:25:36,148 | ERROR | Failed to get ticker 'RBLX' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:25:36,148 | ERROR | $RBLX: possibly delisted; no timezone found
+2026-01-11 22:25:36,149 | ERROR | 
+1 Failed download:
+2026-01-11 22:25:36,149 | ERROR | ['RBLX']: possibly delisted; no timezone found
+2026-01-11 22:25:41,768 | ERROR | 
+1 Failed download:
+2026-01-11 22:25:41,768 | ERROR | ['COIN']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:25:47,171 | ERROR | Failed to get ticker 'HOOD' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:25:47,171 | ERROR | $HOOD: possibly delisted; no timezone found
+2026-01-11 22:25:47,180 | ERROR | 
+1 Failed download:
+2026-01-11 22:25:47,180 | ERROR | ['HOOD']: possibly delisted; no timezone found
+2026-01-11 22:26:03,775 | ERROR | Failed to get ticker 'SQ' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:26:03,775 | ERROR | $SQ: possibly delisted; no timezone found
+2026-01-11 22:26:03,782 | ERROR | 
+1 Failed download:
+2026-01-11 22:26:03,782 | ERROR | ['SQ']: possibly delisted; no timezone found
+2026-01-11 22:26:08,931 | ERROR | 
+1 Failed download:
+2026-01-11 22:26:08,931 | ERROR | ['SHOP']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:26:14,861 | ERROR | 
+1 Failed download:
+2026-01-11 22:26:14,861 | ERROR | ['SNOW']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:26:21,135 | ERROR | 
+1 Failed download:
+2026-01-11 22:26:21,135 | ERROR | ['DDOG']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:26:27,126 | ERROR | 
+1 Failed download:
+2026-01-11 22:26:27,126 | ERROR | ['NET']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:26:32,883 | ERROR | 
+1 Failed download:
+2026-01-11 22:26:32,883 | ERROR | ['ZS']: TypeError("'NoneType' object is not subscriptable")
+2026-01-11 22:27:13,153 | ERROR | Failed to get ticker 'PANW' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:27:13,154 | ERROR | $PANW: possibly delisted; no timezone found
+2026-01-11 22:27:13,161 | ERROR | 
+1 Failed download:
+2026-01-11 22:27:13,161 | ERROR | ['PANW']: possibly delisted; no timezone found
+2026-01-11 22:27:19,281 | ERROR | Failed to get ticker 'OKTA' reason: Failed to perform, curl: (60) SSL certificate problem: self signed certificate in certificate chain. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+2026-01-11 22:27:19,281 | ERROR | $OKTA: possibly delisted; no timezone found
+2026-01-11 22:27:19,283 | ERROR | 
+1 Failed download:
+2026-01-11 22:27:19,283 | ERROR | ['OKTA']: possibly delisted; no timezone found

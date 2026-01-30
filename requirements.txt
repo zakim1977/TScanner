@@ -1,0 +1,113 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# InvestorIQ - Complete Requirements
+# ═══════════════════════════════════════════════════════════════════════════════
+# Install: pip install -r requirements.txt
+# For GPU PyTorch: pip install torch --index-url https://download.pytorch.org/whl/cu118
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Core Framework
+# ═══════════════════════════════════════════════════════════════════════════════
+streamlit>=1.28.0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Data Processing
+# ═══════════════════════════════════════════════════════════════════════════════
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Visualization
+# ═══════════════════════════════════════════════════════════════════════════════
+plotly>=5.18.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# API & Web
+# ═══════════════════════════════════════════════════════════════════════════════
+requests>=2.31.0
+pytz>=2023.3
+aiohttp>=3.9.0              # Async HTTP requests
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Technical Analysis
+# ═══════════════════════════════════════════════════════════════════════════════
+ta>=0.10.0                  # Technical Analysis library
+smartmoneyconcepts>=0.0.21  # SMC detection (order blocks, FVG, etc.)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Market Data
+# ═══════════════════════════════════════════════════════════════════════════════
+yfinance>=0.2.0             # Stock/ETF data
+ccxt>=4.0.0                 # Crypto exchange data (optional, for advanced features)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Machine Learning - Core
+# ═══════════════════════════════════════════════════════════════════════════════
+scikit-learn>=1.3.0         # Core ML algorithms
+joblib>=1.3.0               # Model persistence
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Machine Learning - Gradient Boosting (Traditional ML - 26 Models)
+# ═══════════════════════════════════════════════════════════════════════════════
+xgboost>=2.0.0              # XGBoost (often best for tabular)
+lightgbm>=4.0.0             # LightGBM (fast, handles categorical)
+catboost>=1.2.0             # CatBoost (great for categorical features)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Machine Learning - Deep Learning (Pattern Detection CNN/LSTM)
+# ═══════════════════════════════════════════════════════════════════════════════
+torch>=2.0.0                # PyTorch for neural networks
+torchvision>=0.15.0         # Image processing utilities
+# GPU Installation (CUDA 11.8):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# GPU Installation (CUDA 12.1):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Database
+# ═══════════════════════════════════════════════════════════════════════════════
+# SQLite is built-in, no additional packages needed
+# Optional for larger deployments:
+# sqlalchemy>=2.0.0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Utilities
+# ═══════════════════════════════════════════════════════════════════════════════
+python-dateutil>=2.8.0      # Date parsing
+tqdm>=4.66.0                # Progress bars
+openpyxl>=3.1.0             # Excel read/write
+xlsxwriter>=3.1.0           # Excel formatting
+retry-requests>=2.0.0       # Retry failed requests
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Optional - Weather & Evaporation (Other Projects)
+# ═══════════════════════════════════════════════════════════════════════════════
+# Uncomment if needed for other projects:
+# openmeteo-requests>=1.2.0
+# meteostat>=1.6.0
+# pyet>=1.2.0
+# pulp>=2.7.0
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUICK INSTALL COMMANDS
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Full install (CPU):
+#   pip install -r requirements.txt
+#
+# Full install (GPU - NVIDIA CUDA 11.8):
+#   pip install -r requirements.txt
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#
+# Minimal install (Traditional ML only, no deep learning):
+#   pip install streamlit pandas numpy plotly requests pytz ta smartmoneyconcepts yfinance scikit-learn joblib xgboost lightgbm catboost
+#
+# Check GPU availability in Python:
+#   import torch
+#   print(f"CUDA available: {torch.cuda.is_available()}")
+#   print(f"GPU: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'None'}")
+#
+# ═══════════════════════════════════════════════════════════════════════════════

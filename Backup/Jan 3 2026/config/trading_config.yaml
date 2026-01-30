@@ -1,0 +1,343 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# InvestorIQ Trading Configuration
+# ═══════════════════════════════════════════════════════════════════════════════
+# 
+# Edit this file to tune the trading system - NO CODE CHANGES NEEDED!
+# After editing, just restart the app.
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+version: "1.0"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 🐋 WHALE THRESHOLDS
+# When do we consider whales bullish or bearish?
+# Higher numbers = more strict (fewer signals but higher quality)
+# ─────────────────────────────────────────────────────────────────────────────
+whale_thresholds:
+  # BULLISH levels (whale long %)
+  extreme_bullish: 75    # 🔥 Very high conviction - rare but powerful
+  strong_bullish: 70     # 💪 Strong conviction - high confidence trades
+  bullish: 65            # ✅ Clear bullish bias
+  lean_bullish: 60       # 📈 Slight bullish lean
+  neutral_high: 55       # ➖ Upper neutral zone
+  
+  # BEARISH levels (whale long %)
+  neutral_low: 45        # ➖ Lower neutral zone
+  lean_bearish: 40       # 📉 Slight bearish lean
+  bearish: 35            # ✅ Clear bearish bias
+  strong_bearish: 30     # 💪 Strong bearish conviction
+  extreme_bearish: 25    # 🔥 Very high bearish conviction
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 📊 DIVERGENCE THRESHOLDS
+# Whale% minus Retail% = Divergence
+# Positive = Whales more bullish (GOOD for longs)
+# Negative = Retail more bullish (BAD - retail overleveraged)
+# ─────────────────────────────────────────────────────────────────────────────
+divergence_thresholds:
+  extreme: 20            # 🔥 Massive divergence - strong squeeze setup
+  squeeze_setup: 15      # 💪 High divergence - squeeze potential
+  clear_edge: 10         # ✅ Clear trading edge
+  slight_edge: 5         # 📈 Minor edge
+  no_edge: 0             # ➖ No divergence benefit
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 📍 POSITION THRESHOLDS
+# Where in the price range is optimal for entry?
+# ─────────────────────────────────────────────────────────────────────────────
+position_thresholds:
+  # For LONG trades (want to buy low)
+  early_long: 35         # 🎯 Best entry zone for longs (0-35%)
+  late_long: 65          # ⚠️ Getting late for longs (above 65%)
+  
+  # For SHORT trades (want to sell high)  
+  early_short: 65        # 🎯 Best entry zone for shorts (65-100%)
+  late_short: 35         # ⚠️ Getting late for shorts (below 35%)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 🎯 SCORING POINTS
+# How many points each layer contributes (total = 100)
+# ─────────────────────────────────────────────────────────────────────────────
+scoring:
+  # LAYER 1: Direction (max 40 points)
+  layer1_direction:
+    max_points: 40
+    extreme_conviction: 40
+    strong_conviction: 36
+    clear_direction: 32
+    lean_direction: 28
+    slight_lean: 22
+    neutral: 15
+    oi_confirmation_bonus: 5
+  
+  # LAYER 2: Squeeze/Edge (max 30 points)  
+  layer2_squeeze:
+    max_points: 30
+    extreme_divergence: 22
+    high_divergence: 18
+    medium_divergence: 14
+    low_divergence: 10
+    no_divergence_base: 8
+    # Whale conviction bonus (even without divergence)
+    whale_conviction_strong: 10
+    whale_conviction_good: 7
+    whale_conviction_slight: 4
+  
+  # LAYER 3: Entry Timing (max 30 points)
+  layer3_entry:
+    max_points: 30
+    # TA component (15 pts max)
+    ta_strong: 15        # TA >= 70
+    ta_good: 12          # TA >= 55
+    ta_moderate: 9       # TA >= 40
+    ta_weak: 6           # TA < 40
+    # Position component (18 pts max)
+    position_optimal: 18  # EARLY position
+    position_middle: 12   # MIDDLE position
+    position_late: 5      # LATE position
+    position_chasing: 0   # CHASING - worst
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ⚠️ PENALTIES
+# When to reduce scores (protect from bad trades)
+# ─────────────────────────────────────────────────────────────────────────────
+penalties:
+  # When RETAIL is more positioned than WHALES = WARNING!
+  retail_overleveraged:
+    # For LONGS: retail long% thresholds
+    extreme_threshold: 70   # Retail >= 70% long
+    high_threshold: 65      # Retail >= 65% long
+    moderate_threshold: 60  # Retail >= 60% long
+    # Penalty points to subtract
+    extreme_penalty: 12
+    high_penalty: 8
+    moderate_penalty: 5
+    # Minimum divergence to trigger (whale - retail)
+    min_divergence: -5      # Only warn if retail > whale by 5%+
+  
+  # Counter-trend penalty
+  counter_trend:
+    penalty: 10             # Going against strong structure
+  
+  # Chasing penalty  
+  chasing:
+    penalty: 8              # Entering at poor position
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 🚦 SIGNAL RULES
+# Priority-ordered rules - highest priority checked FIRST
+# If a rule matches, it determines the action
+# ─────────────────────────────────────────────────────────────────────────────
+signal_rules:
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRIORITY 100: CAPITULATION REVERSAL (Highest Priority)
+  # ═══════════════════════════════════════════════════════════════════════════
+  - name: "CAPITULATION_REVERSAL"
+    priority: 100
+    description: "Panic selling exhausted, whales accumulated, near lows = BUY"
+    conditions:
+      money_flow_phase: "CAPITULATION"
+      whale_pct_min: 65
+      position_pct_max: 35
+    action: "EARLY_LONG"
+    confidence: "HIGH"
+    reason: "🔥 CAPITULATION + Whales positioned + Near lows = REVERSAL IMMINENT"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRIORITY 95: RETAIL TRAP WARNING
+  # ═══════════════════════════════════════════════════════════════════════════
+  - name: "RETAIL_TRAP_LONG"
+    priority: 95
+    description: "Retail more bullish than whales - WARNING for longs"
+    conditions:
+      whale_pct_min: 55
+      whale_pct_max: 68
+      retail_pct_min: 70
+      divergence_max: -5
+    action: "WAIT"
+    confidence: "MEDIUM"
+    reason: "⚠️ RETAIL TRAP: Retail (overleveraged) more bullish than Whales - WAIT"
+    reduce_score: true
+    penalty: 15
+
+  - name: "RETAIL_TRAP_SHORT"
+    priority: 95
+    description: "Retail more bearish than whales - WARNING for shorts"
+    conditions:
+      whale_pct_min: 32
+      whale_pct_max: 45
+      retail_pct_max: 30
+      divergence_min: 5
+    action: "WAIT"
+    confidence: "MEDIUM"
+    reason: "⚠️ RETAIL TRAP: Retail (overleveraged) more bearish than Whales - WAIT"
+    reduce_score: true
+    penalty: 15
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRIORITY 90: SQUEEZE SETUPS
+  # ═══════════════════════════════════════════════════════════════════════════
+  - name: "SHORT_SQUEEZE"
+    priority: 90
+    description: "Whales long, retail short - shorts will be liquidated"
+    conditions:
+      whale_pct_min: 70
+      retail_pct_max: 50
+      divergence_min: 15
+    action: "STRONG_LONG"
+    confidence: "HIGH"
+    reason: "🔥 SHORT SQUEEZE: Whales positioned, shorts trapped - explosive move UP"
+
+  - name: "LONG_SQUEEZE"
+    priority: 90
+    description: "Whales short, retail long - longs will be liquidated"
+    conditions:
+      whale_pct_max: 30
+      retail_pct_min: 50
+      divergence_max: -15
+    action: "STRONG_SHORT"
+    confidence: "HIGH"
+    reason: "🔥 LONG SQUEEZE: Whales positioned short, longs trapped - explosive move DOWN"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRIORITY 85: DISTRIBUTION/ACCUMULATION
+  # ═══════════════════════════════════════════════════════════════════════════
+  - name: "DISTRIBUTION_TOP"
+    priority: 85
+    description: "Smart money distributing at highs"
+    conditions:
+      money_flow_phase: "DISTRIBUTION"
+      whale_pct_max: 35
+      position_pct_min: 65
+    action: "EARLY_SHORT"
+    confidence: "HIGH"
+    reason: "📉 DISTRIBUTION at highs + Whales short = TOP FORMING"
+
+  - name: "ACCUMULATION_BOTTOM"
+    priority: 85
+    description: "Smart money accumulating at lows"
+    conditions:
+      money_flow_phase: "ACCUMULATION"
+      whale_pct_min: 65
+      position_pct_max: 35
+    action: "EARLY_LONG"
+    confidence: "HIGH"
+    reason: "📈 ACCUMULATION at lows + Whales long = BOTTOM FORMING"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRIORITY 80: STRONG CONVICTION TRADES
+  # ═══════════════════════════════════════════════════════════════════════════
+  - name: "STRONG_WHALE_LONG"
+    priority: 80
+    description: "Strong whale bullish conviction"
+    conditions:
+      whale_pct_min: 70
+      position_pct_max: 50
+    action: "LONG_SETUP"
+    confidence: "HIGH"
+    reason: "🐋 Strong whale conviction LONG at good position"
+
+  - name: "STRONG_WHALE_SHORT"
+    priority: 80
+    description: "Strong whale bearish conviction"
+    conditions:
+      whale_pct_max: 30
+      position_pct_min: 50
+    action: "SHORT_SETUP"
+    confidence: "HIGH"
+    reason: "🐋 Strong whale conviction SHORT at good position"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRIORITY 70: BUILDING SETUPS
+  # ═══════════════════════════════════════════════════════════════════════════
+  - name: "BUILDING_LONG"
+    priority: 70
+    description: "Whales leaning long, setup forming"
+    conditions:
+      whale_pct_min: 60
+      whale_pct_max: 70
+      position_pct_max: 50
+    action: "BUILDING_LONG"
+    confidence: "MEDIUM"
+    reason: "📈 Whales leaning long, breakout setup forming"
+
+  - name: "BUILDING_SHORT"
+    priority: 70
+    description: "Whales leaning short, setup forming"
+    conditions:
+      whale_pct_min: 30
+      whale_pct_max: 40
+      position_pct_min: 50
+    action: "BUILDING_SHORT"
+    confidence: "MEDIUM"
+    reason: "📉 Whales leaning short, breakdown setup forming"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PRIORITY 50: NEUTRAL / WAIT
+  # ═══════════════════════════════════════════════════════════════════════════
+  - name: "NEUTRAL_ZONE"
+    priority: 50
+    description: "No clear edge - wait for setup"
+    conditions:
+      whale_pct_min: 45
+      whale_pct_max: 55
+    action: "WAIT"
+    confidence: "LOW"
+    reason: "⏸️ Whales neutral - no clear edge, wait for positioning"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ₿ BTC CORRELATION
+# How to adjust altcoin signals based on BTC
+# ─────────────────────────────────────────────────────────────────────────────
+btc_correlation:
+  # Correlation thresholds
+  critical: 0.85          # Very high - BTC is critical
+  high: 0.70              # High - check BTC before trading
+  moderate: 0.50          # Moderate - some independence
+  low: 0.30               # Low - mostly independent
+  
+  # Score adjustments
+  aligned_bonus: 5        # Signal aligns with BTC trend
+  counter_penalty: 10     # Signal against BTC trend
+  ignore_below: 0.50      # Don't warn if correlation below this
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 📈 TRADING MODES
+# Different settings for different trading styles
+# ─────────────────────────────────────────────────────────────────────────────
+trading_modes:
+  scalp:
+    timeframes: ["1m", "5m"]
+    max_stop_loss_pct: 2.0
+    min_risk_reward: 1.5
+    description: "Quick trades, tight stops"
+    
+  day_trade:
+    timeframes: ["15m", "1h"]
+    max_stop_loss_pct: 4.0
+    min_risk_reward: 2.0
+    description: "Intraday positions"
+    
+  swing_trade:
+    timeframes: ["4h", "1d"]
+    max_stop_loss_pct: 8.0
+    min_risk_reward: 2.5
+    description: "Multi-day positions"
+    
+  investment:
+    timeframes: ["1w"]
+    max_stop_loss_pct: 15.0
+    min_risk_reward: 3.0
+    description: "Long-term positions"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 🎚️ FILTERS
+# Minimum requirements for signals
+# ─────────────────────────────────────────────────────────────────────────────
+filters:
+  min_score_to_show: 50       # Don't show signals below this score
+  min_rr_tp1: 0.5             # Minimum R:R for TP1
+  min_confidence: "LOW"        # Minimum confidence level
+  require_whale_data: false    # Require whale data for signals?

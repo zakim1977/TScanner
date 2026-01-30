@@ -1,0 +1,343 @@
+{
+  "mode": "swing",
+  "market_type": "crypto",
+  "n_samples": 24939,
+  "avg_f1": 0.7245003476350963,
+  "labels": [
+    "trend_holds_bull",
+    "trend_holds_bear",
+    "reversal_to_bull",
+    "reversal_to_bear",
+    "drawdown"
+  ],
+  "per_label": {
+    "trend_holds_bull": {
+      "accuracy": 0.8929430633520449,
+      "precision": 0.6403127715030409,
+      "recall": 0.8599766627771295,
+      "f1": 0.7340637450199203,
+      "positive_rate": 0.17362538218635656,
+      "test_positive_rate": 0.17181234963913392,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "XGBoost_Deep",
+      "all_models": {
+        "XGBoost_Deep": {
+          "f1": 0.7340637450199203,
+          "precision": 0.6403127715030409,
+          "recall": 0.8599766627771295
+        },
+        "GradientBoosting_Deep": {
+          "f1": 0.7233802816901408,
+          "precision": 0.6993464052287581,
+          "recall": 0.7491248541423571
+        },
+        "HistGradientBoosting": {
+          "f1": 0.6784188034188035,
+          "precision": 0.625615763546798,
+          "recall": 0.7409568261376897
+        },
+        "GradientBoosting": {
+          "f1": 0.6608247422680412,
+          "precision": 0.5918744228993537,
+          "recall": 0.7479579929988331
+        },
+        "MLP_Wide": {
+          "f1": 0.5909943714821764,
+          "precision": 0.49411764705882355,
+          "recall": 0.73512252042007
+        },
+        "MLP_Medium": {
+          "f1": 0.5834970530451866,
+          "precision": 0.5038167938931297,
+          "recall": 0.6931155192532089
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.5822050290135397,
+          "precision": 0.49710982658959535,
+          "recall": 0.7024504084014003
+        },
+        "XGBoost": {
+          "f1": 0.5743740795287187,
+          "precision": 0.4195804195804196,
+          "recall": 0.9101516919486581
+        },
+        "MLP_Large": {
+          "f1": 0.567476948868399,
+          "precision": 0.44277305428384567,
+          "recall": 0.7899649941656943
+        },
+        "LightGBM_Deep": {
+          "f1": 0.5632823365785814,
+          "precision": 0.4011887072808321,
+          "recall": 0.9451575262543758
+        }
+      }
+    },
+    "trend_holds_bear": {
+      "accuracy": 0.8827185244587009,
+      "precision": 0.6664350243224462,
+      "recall": 0.9013157894736842,
+      "f1": 0.7662804634438674,
+      "positive_rate": 0.22074081499674203,
+      "test_positive_rate": 0.21331194867682438,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "XGBoost_Deep",
+      "all_models": {
+        "XGBoost_Deep": {
+          "f1": 0.7662804634438674,
+          "precision": 0.6664350243224462,
+          "recall": 0.9013157894736842
+        },
+        "GradientBoosting_Deep": {
+          "f1": 0.7560253699788584,
+          "precision": 0.6871637202152191,
+          "recall": 0.8402255639097744
+        },
+        "HistGradientBoosting": {
+          "f1": 0.7112,
+          "precision": 0.6190807799442897,
+          "recall": 0.8355263157894737
+        },
+        "GradientBoosting": {
+          "f1": 0.6929072486360094,
+          "precision": 0.5918774966711052,
+          "recall": 0.8355263157894737
+        },
+        "XGBoost": {
+          "f1": 0.6579378068739771,
+          "precision": 0.5047714716223004,
+          "recall": 0.9445488721804511
+        },
+        "MLP_Large": {
+          "f1": 0.6485355648535565,
+          "precision": 0.5844645550527904,
+          "recall": 0.7283834586466166
+        },
+        "MLP_Wide": {
+          "f1": 0.6469920544835415,
+          "precision": 0.5414819506016466,
+          "recall": 0.8035714285714286
+        },
+        "LightGBM_Deep": {
+          "f1": 0.6390197926484449,
+          "precision": 0.47994336951392164,
+          "recall": 0.9558270676691729
+        },
+        "CatBoost_Deep": {
+          "f1": 0.625804474410052,
+          "precision": 0.4643019554342883,
+          "recall": 0.9595864661654135
+        },
+        "MLP_Medium": {
+          "f1": 0.6193601312551271,
+          "precision": 0.549490538573508,
+          "recall": 0.7095864661654135
+        }
+      }
+    },
+    "reversal_to_bull": {
+      "accuracy": 0.9266238973536488,
+      "precision": 0.5415929203539823,
+      "recall": 0.7409200968523002,
+      "f1": 0.6257668711656442,
+      "positive_rate": 0.07979549897248259,
+      "test_positive_rate": 0.08279871692060946,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "XGBoost_Deep",
+      "all_models": {
+        "XGBoost_Deep": {
+          "f1": 0.6257668711656442,
+          "precision": 0.5415929203539823,
+          "recall": 0.7409200968523002
+        },
+        "GradientBoosting_Deep": {
+          "f1": 0.6248600223964166,
+          "precision": 0.58125,
+          "recall": 0.6755447941888619
+        },
+        "HistGradientBoosting": {
+          "f1": 0.5503731343283582,
+          "precision": 0.44764795144157815,
+          "recall": 0.7142857142857143
+        },
+        "GradientBoosting": {
+          "f1": 0.5353901996370236,
+          "precision": 0.4281567489114659,
+          "recall": 0.7142857142857143
+        },
+        "XGBoost": {
+          "f1": 0.4842681258549932,
+          "precision": 0.3374642516682555,
+          "recall": 0.8571428571428571
+        },
+        "LightGBM_Deep": {
+          "f1": 0.4790575916230366,
+          "precision": 0.32825112107623317,
+          "recall": 0.8861985472154964
+        },
+        "MLP_Large": {
+          "f1": 0.47398843930635837,
+          "precision": 0.35964912280701755,
+          "recall": 0.6949152542372882
+        },
+        "KNeighbors_5": {
+          "f1": 0.4688995215311005,
+          "precision": 0.6869158878504673,
+          "recall": 0.3559322033898305
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.4586628324946082,
+          "precision": 0.3261758691206544,
+          "recall": 0.7723970944309927
+        },
+        "MLP_Wide": {
+          "f1": 0.4518950437317784,
+          "precision": 0.3232533889468196,
+          "recall": 0.7506053268765133
+        }
+      }
+    },
+    "reversal_to_bear": {
+      "accuracy": 0.91299117882919,
+      "precision": 0.5691275167785235,
+      "recall": 0.7895716945996276,
+      "f1": 0.6614664586583463,
+      "positive_rate": 0.10365395218284798,
+      "test_positive_rate": 0.10765838011226944,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "GradientBoosting_Deep",
+      "all_models": {
+        "GradientBoosting_Deep": {
+          "f1": 0.6614664586583463,
+          "precision": 0.5691275167785235,
+          "recall": 0.7895716945996276
+        },
+        "XGBoost_Deep": {
+          "f1": 0.6506024096385542,
+          "precision": 0.5461441213653603,
+          "recall": 0.8044692737430168
+        },
+        "HistGradientBoosting": {
+          "f1": 0.5909090909090909,
+          "precision": 0.45363908275174475,
+          "recall": 0.8472998137802608
+        },
+        "GradientBoosting": {
+          "f1": 0.5729099157485418,
+          "precision": 0.4393638170974155,
+          "recall": 0.8230912476722533
+        },
+        "MLP_Wide": {
+          "f1": 0.5389972144846796,
+          "precision": 0.43047830923248054,
+          "recall": 0.7206703910614525
+        },
+        "XGBoost": {
+          "f1": 0.5231607629427792,
+          "precision": 0.3697996918335901,
+          "recall": 0.8938547486033519
+        },
+        "LightGBM_Deep": {
+          "f1": 0.5221097496004262,
+          "precision": 0.3656716417910448,
+          "recall": 0.9124767225325885
+        },
+        "MLP_Large": {
+          "f1": 0.5162144275314361,
+          "precision": 0.4004106776180698,
+          "recall": 0.7262569832402235
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.5146396396396397,
+          "precision": 0.3688458434221146,
+          "recall": 0.851024208566108
+        },
+        "LightGBM": {
+          "f1": 0.49198396793587174,
+          "precision": 0.3365318711446196,
+          "recall": 0.9143389199255121
+        }
+      }
+    },
+    "drawdown": {
+      "accuracy": 0.8821170809943866,
+      "precision": 0.7692705638903259,
+      "recall": 0.9128299570288521,
+      "f1": 0.8349241998877035,
+      "positive_rate": 0.33567239737356525,
+      "test_positive_rate": 0.3265838011226945,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "XGBoost_Deep",
+      "all_models": {
+        "XGBoost_Deep": {
+          "f1": 0.8349241998877035,
+          "precision": 0.7692705638903259,
+          "recall": 0.9128299570288521
+        },
+        "GradientBoosting_Deep": {
+          "f1": 0.8075471698113208,
+          "precision": 0.7659691629955947,
+          "recall": 0.8538980969920197
+        },
+        "HistGradientBoosting": {
+          "f1": 0.7885714285714286,
+          "precision": 0.7375734901122395,
+          "recall": 0.8471454880294659
+        },
+        "XGBoost": {
+          "f1": 0.766417718259078,
+          "precision": 0.6601597160603372,
+          "recall": 0.9134438305709024
+        },
+        "LightGBM_Deep": {
+          "f1": 0.7627416520210897,
+          "precision": 0.6452846219201359,
+          "recall": 0.9324739103744628
+        },
+        "CatBoost_Deep": {
+          "f1": 0.7572427572427572,
+          "precision": 0.6383157894736842,
+          "recall": 0.9306322897483118
+        },
+        "GradientBoosting": {
+          "f1": 0.7544642857142857,
+          "precision": 0.6915601023017903,
+          "recall": 0.8299570288520565
+        },
+        "RandomForest_Deep": {
+          "f1": 0.74993653211475,
+          "precision": 0.6393939393939394,
+          "recall": 0.9066912216083487
+        },
+        "LightGBM": {
+          "f1": 0.7491323748140803,
+          "precision": 0.6282744282744283,
+          "recall": 0.9275629220380601
+        },
+        "MLP_Wide": {
+          "f1": 0.7341040462427746,
+          "precision": 0.693610049153468,
+          "recall": 0.7796193984039288
+        }
+      }
+    }
+  },
+  "best_models": {
+    "trend_holds_bull": "XGBoost_Deep",
+    "trend_holds_bear": "XGBoost_Deep",
+    "reversal_to_bull": "XGBoost_Deep",
+    "reversal_to_bear": "GradientBoosting_Deep",
+    "drawdown": "XGBoost_Deep"
+  },
+  "thresholds": {
+    "trend_holds": 4.43,
+    "reversal": 5.06,
+    "drawdown": 5.58
+  },
+  "trained_at": "2026-01-18T12:35:51.061871"
+}

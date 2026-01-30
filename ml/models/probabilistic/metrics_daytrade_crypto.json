@@ -1,0 +1,336 @@
+{
+  "mode": "daytrade",
+  "market_type": "crypto",
+  "n_samples": 24939,
+  "avg_f1": 0.647319222886653,
+  "labels": [
+    "continuation_bull",
+    "continuation_bear",
+    "fakeout_to_bull",
+    "fakeout_to_bear",
+    "vol_expansion"
+  ],
+  "metrics": {
+    "continuation_bull": {
+      "accuracy": 0.9137931034482759,
+      "precision": 0.5899880810488677,
+      "recall": 0.8519793459552496,
+      "f1": 0.6971830985915493,
+      "positive_rate": 0.12250012530700216,
+      "test_positive_rate": 0.1164795509222133,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "XGBoost_Deep",
+      "all_models": {
+        "XGBoost_Deep": {
+          "f1": 0.6971830985915493,
+          "precision": 0.5899880810488677,
+          "recall": 0.8519793459552496
+        },
+        "GradientBoosting_Deep": {
+          "f1": 0.6889383815887157,
+          "precision": 0.6057441253263708,
+          "recall": 0.7986230636833046
+        },
+        "HistGradientBoosting": {
+          "f1": 0.6378227494766224,
+          "precision": 0.5363849765258216,
+          "recall": 0.7865748709122203
+        },
+        "GradientBoosting": {
+          "f1": 0.6272666218938885,
+          "precision": 0.51431718061674,
+          "recall": 0.8037865748709122
+        },
+        "MLP_Large": {
+          "f1": 0.5737158105403602,
+          "precision": 0.4684095860566449,
+          "recall": 0.7401032702237521
+        },
+        "XGBoost": {
+          "f1": 0.5544147843942505,
+          "precision": 0.3950256035113387,
+          "recall": 0.9294320137693631
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.5430932703659976,
+          "precision": 0.4132973944294699,
+          "recall": 0.7917383820998278
+        },
+        "MLP_Medium": {
+          "f1": 0.5389447236180904,
+          "precision": 0.42433234421364985,
+          "recall": 0.7383820998278829
+        },
+        "MLP_Wide": {
+          "f1": 0.5356125356125356,
+          "precision": 0.40034071550255534,
+          "recall": 0.8089500860585198
+        },
+        "LightGBM_Deep": {
+          "f1": 0.5244191559981034,
+          "precision": 0.3619109947643979,
+          "recall": 0.9518072289156626
+        }
+      }
+    },
+    "continuation_bear": {
+      "accuracy": 0.9041700080192462,
+      "precision": 0.6346368715083799,
+      "recall": 0.7899860917941586,
+      "f1": 0.7038413878562577,
+      "positive_rate": 0.1424490000501228,
+      "test_positive_rate": 0.14414595028067362,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "GradientBoosting_Deep",
+      "all_models": {
+        "GradientBoosting_Deep": {
+          "f1": 0.7038413878562577,
+          "precision": 0.6346368715083799,
+          "recall": 0.7899860917941586
+        },
+        "XGBoost_Deep": {
+          "f1": 0.7030640668523677,
+          "precision": 0.5864312267657993,
+          "recall": 0.8776077885952712
+        },
+        "HistGradientBoosting": {
+          "f1": 0.6705539358600583,
+          "precision": 0.5773092369477911,
+          "recall": 0.799721835883171
+        },
+        "GradientBoosting": {
+          "f1": 0.6312292358803987,
+          "precision": 0.5243790248390064,
+          "recall": 0.7927677329624478
+        },
+        "MLP_Wide": {
+          "f1": 0.581205866376969,
+          "precision": 0.4768270944741533,
+          "recall": 0.7440890125173852
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.57299451918286,
+          "precision": 0.44642857142857145,
+          "recall": 0.799721835883171
+        },
+        "MLP_Medium": {
+          "f1": 0.5684539302446643,
+          "precision": 0.454242928452579,
+          "recall": 0.7593880389429764
+        },
+        "LightGBM_Deep": {
+          "f1": 0.5667779632721202,
+          "precision": 0.4048896839594514,
+          "recall": 0.9443671766342142
+        },
+        "XGBoost": {
+          "f1": 0.566341670199237,
+          "precision": 0.4073170731707317,
+          "recall": 0.9290681502086231
+        },
+        "MLP_Large": {
+          "f1": 0.5585106382978723,
+          "precision": 0.45219638242894056,
+          "recall": 0.7301808066759388
+        }
+      }
+    },
+    "fakeout_to_bull": {
+      "accuracy": 0.9947874899759422,
+      "precision": 0.6,
+      "recall": 0.4838709677419355,
+      "f1": 0.5357142857142857,
+      "positive_rate": 0.008170016540524284,
+      "test_positive_rate": 0.006214915797914996,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "LightGBM_Deep",
+      "all_models": {
+        "LightGBM_Deep": {
+          "f1": 0.5357142857142857,
+          "precision": 0.6,
+          "recall": 0.4838709677419355
+        },
+        "CatBoost": {
+          "f1": 0.5116279069767442,
+          "precision": 0.4,
+          "recall": 0.7096774193548387
+        },
+        "LightGBM": {
+          "f1": 0.49122807017543857,
+          "precision": 0.5384615384615384,
+          "recall": 0.45161290322580644
+        },
+        "CatBoost_Deep": {
+          "f1": 0.47058823529411764,
+          "precision": 0.43243243243243246,
+          "recall": 0.5161290322580645
+        },
+        "XGBoost": {
+          "f1": 0.45901639344262296,
+          "precision": 0.4666666666666667,
+          "recall": 0.45161290322580644
+        },
+        "XGBoost_Deep": {
+          "f1": 0.4444444444444444,
+          "precision": 0.5217391304347826,
+          "recall": 0.3870967741935484
+        },
+        "GradientBoosting_Deep": {
+          "f1": 0.43137254901960786,
+          "precision": 0.55,
+          "recall": 0.3548387096774194
+        },
+        "GradientBoosting": {
+          "f1": 0.42857142857142855,
+          "precision": 0.48,
+          "recall": 0.3870967741935484
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.39436619718309857,
+          "precision": 0.35,
+          "recall": 0.45161290322580644
+        },
+        "LightGBM_Fast": {
+          "f1": 0.38181818181818183,
+          "precision": 0.26582278481012656,
+          "recall": 0.6774193548387096
+        }
+      }
+    },
+    "fakeout_to_bear": {
+      "accuracy": 0.9933841218925421,
+      "precision": 0.7391304347826086,
+      "recall": 0.38636363636363635,
+      "f1": 0.5074626865671642,
+      "positive_rate": 0.006064858904315573,
+      "test_positive_rate": 0.008821170809943865,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "XGBoost_Deep",
+      "all_models": {
+        "XGBoost_Deep": {
+          "f1": 0.5074626865671642,
+          "precision": 0.7391304347826086,
+          "recall": 0.38636363636363635
+        },
+        "CatBoost_Deep": {
+          "f1": 0.5063291139240507,
+          "precision": 0.5714285714285714,
+          "recall": 0.45454545454545453
+        },
+        "LightGBM_Deep": {
+          "f1": 0.4927536231884058,
+          "precision": 0.68,
+          "recall": 0.38636363636363635
+        },
+        "XGBoost": {
+          "f1": 0.4864864864864865,
+          "precision": 0.6,
+          "recall": 0.4090909090909091
+        },
+        "GradientBoosting_Deep": {
+          "f1": 0.47619047619047616,
+          "precision": 0.7894736842105263,
+          "recall": 0.3409090909090909
+        },
+        "CatBoost": {
+          "f1": 0.45977011494252873,
+          "precision": 0.46511627906976744,
+          "recall": 0.45454545454545453
+        },
+        "GradientBoosting": {
+          "f1": 0.45454545454545453,
+          "precision": 0.6818181818181818,
+          "recall": 0.3409090909090909
+        },
+        "LightGBM_Fast": {
+          "f1": 0.4230769230769231,
+          "precision": 0.36666666666666664,
+          "recall": 0.5
+        },
+        "LightGBM": {
+          "f1": 0.4225352112676056,
+          "precision": 0.5555555555555556,
+          "recall": 0.3409090909090909
+        },
+        "XGBoost_Fast": {
+          "f1": 0.38095238095238093,
+          "precision": 0.32786885245901637,
+          "recall": 0.45454545454545453
+        }
+      }
+    },
+    "vol_expansion": {
+      "accuracy": 0.9190056134723336,
+      "precision": 0.6990027198549411,
+      "recall": 0.9145907473309609,
+      "f1": 0.7923946557040082,
+      "positive_rate": 0.16826224249411056,
+      "test_positive_rate": 0.1690056134723336,
+      "n_samples": 19951,
+      "n_test": 4988,
+      "best_model": "XGBoost_Deep",
+      "all_models": {
+        "XGBoost_Deep": {
+          "f1": 0.7923946557040082,
+          "precision": 0.6990027198549411,
+          "recall": 0.9145907473309609
+        },
+        "GradientBoosting_Deep": {
+          "f1": 0.7761517615176152,
+          "precision": 0.7145708582834331,
+          "recall": 0.8493475682087782
+        },
+        "HistGradientBoosting": {
+          "f1": 0.7423764458464774,
+          "precision": 0.6666666666666666,
+          "recall": 0.8374851720047449
+        },
+        "GradientBoosting": {
+          "f1": 0.7205218263923733,
+          "precision": 0.6243478260869565,
+          "recall": 0.8517200474495848
+        },
+        "XGBoost": {
+          "f1": 0.6843229389149936,
+          "precision": 0.534712950600801,
+          "recall": 0.9501779359430605
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.6811384466956102,
+          "precision": 0.5739837398373984,
+          "recall": 0.8374851720047449
+        },
+        "LightGBM_Deep": {
+          "f1": 0.662057747051647,
+          "precision": 0.5037128712871287,
+          "recall": 0.9655990510083037
+        },
+        "MLP_Wide": {
+          "f1": 0.6558066211245402,
+          "precision": 0.5886792452830188,
+          "recall": 0.7402135231316725
+        },
+        "MLP_Large": {
+          "f1": 0.6452271567126084,
+          "precision": 0.5663082437275986,
+          "recall": 0.7497034400948992
+        },
+        "LightGBM": {
+          "f1": 0.6319090552724422,
+          "precision": 0.4718969555035129,
+          "recall": 0.9561091340450771
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "continuation": 1.25,
+    "fakeout": 1.57,
+    "vol_expansion": 1.4
+  },
+  "trained_at": "2026-01-16T21:13:55.589797"
+}

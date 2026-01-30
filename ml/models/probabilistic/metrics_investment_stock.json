@@ -1,0 +1,344 @@
+{
+  "mode": "investment",
+  "market_type": "stock",
+  "n_samples": 75216,
+  "avg_f1": 0.5427939449118788,
+  "labels": [
+    "accumulation",
+    "distribution",
+    "reversal_to_bull",
+    "reversal_to_bear",
+    "large_drawdown"
+  ],
+  "metrics": {
+    "accumulation": {
+      "accuracy": 0.9810555703270407,
+      "precision": 0.518918918918919,
+      "recall": 0.6421404682274248,
+      "f1": 0.5739910313901345,
+      "positive_rate": 0.020341687163464735,
+      "test_positive_rate": 0.01987503323584153,
+      "n_samples": 60172,
+      "n_test": 15044,
+      "best_model": "GradientBoosting_Deep",
+      "all_models": {
+        "GradientBoosting_Deep": {
+          "f1": 0.5739910313901345,
+          "precision": 0.518918918918919,
+          "recall": 0.6421404682274248
+        },
+        "XGBoost_Deep": {
+          "f1": 0.5663716814159292,
+          "precision": 0.45528455284552843,
+          "recall": 0.7491638795986622
+        },
+        "GradientBoosting": {
+          "f1": 0.5072115384615384,
+          "precision": 0.39587242026266417,
+          "recall": 0.705685618729097
+        },
+        "HistGradientBoosting": {
+          "f1": 0.49667405764966743,
+          "precision": 0.3714759535655058,
+          "recall": 0.7491638795986622
+        },
+        "LightGBM_Deep": {
+          "f1": 0.45709123757904246,
+          "precision": 0.3131188118811881,
+          "recall": 0.8461538461538461
+        },
+        "KNeighbors_5": {
+          "f1": 0.44150110375275936,
+          "precision": 0.6493506493506493,
+          "recall": 0.33444816053511706
+        },
+        "XGBoost": {
+          "f1": 0.42480883602378927,
+          "precision": 0.2847380410022779,
+          "recall": 0.8361204013377926
+        },
+        "MLP_Large": {
+          "f1": 0.41681574239713776,
+          "precision": 0.2844932844932845,
+          "recall": 0.7792642140468228
+        },
+        "MLP_Medium": {
+          "f1": 0.41625371655104065,
+          "precision": 0.29577464788732394,
+          "recall": 0.7023411371237458
+        },
+        "LightGBM": {
+          "f1": 0.41218925421010427,
+          "precision": 0.27109704641350213,
+          "recall": 0.8595317725752508
+        }
+      }
+    },
+    "distribution": {
+      "accuracy": 0.9833820792342463,
+      "precision": 0.6359223300970874,
+      "recall": 0.42810457516339867,
+      "f1": 0.51171875,
+      "positive_rate": 0.02042478229076647,
+      "test_positive_rate": 0.020340335017282638,
+      "n_samples": 60172,
+      "n_test": 15044,
+      "best_model": "GradientBoosting_Deep",
+      "all_models": {
+        "GradientBoosting_Deep": {
+          "f1": 0.51171875,
+          "precision": 0.6359223300970874,
+          "recall": 0.42810457516339867
+        },
+        "XGBoost_Deep": {
+          "f1": 0.4723618090452261,
+          "precision": 0.3836734693877551,
+          "recall": 0.6143790849673203
+        },
+        "HistGradientBoosting": {
+          "f1": 0.4297994269340974,
+          "precision": 0.3826530612244898,
+          "recall": 0.49019607843137253
+        },
+        "GradientBoosting": {
+          "f1": 0.417910447761194,
+          "precision": 0.38461538461538464,
+          "recall": 0.45751633986928103
+        },
+        "MLP_Large": {
+          "f1": 0.40044994375703036,
+          "precision": 0.3053173241852487,
+          "recall": 0.5816993464052288
+        },
+        "MLP_Wide": {
+          "f1": 0.37404580152671757,
+          "precision": 0.30625,
+          "recall": 0.4803921568627451
+        },
+        "KNeighbors_5": {
+          "f1": 0.34673366834170855,
+          "precision": 0.75,
+          "recall": 0.22549019607843138
+        },
+        "MLP_Medium": {
+          "f1": 0.34088669950738915,
+          "precision": 0.24400564174894218,
+          "recall": 0.565359477124183
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.33737864077669905,
+          "precision": 0.26833976833976836,
+          "recall": 0.4542483660130719
+        },
+        "CatBoost_Deep": {
+          "f1": 0.30083234244946494,
+          "precision": 0.18386627906976744,
+          "recall": 0.826797385620915
+        }
+      }
+    },
+    "reversal_to_bull": {
+      "accuracy": 0.9315341664450943,
+      "precision": 0.35384615384615387,
+      "recall": 0.7076923076923077,
+      "f1": 0.4717948717948718,
+      "positive_rate": 0.04593498637239912,
+      "test_positive_rate": 0.04320659399095985,
+      "n_samples": 60172,
+      "n_test": 15044,
+      "best_model": "GradientBoosting_Deep",
+      "all_models": {
+        "GradientBoosting_Deep": {
+          "f1": 0.4717948717948718,
+          "precision": 0.35384615384615387,
+          "recall": 0.7076923076923077
+        },
+        "HistGradientBoosting": {
+          "f1": 0.4162858329871209,
+          "precision": 0.28514513375071143,
+          "recall": 0.7707692307692308
+        },
+        "XGBoost_Deep": {
+          "f1": 0.41411764705882353,
+          "precision": 0.27789473684210525,
+          "recall": 0.8123076923076923
+        },
+        "KNeighbors_5": {
+          "f1": 0.4103671706263499,
+          "precision": 0.6884057971014492,
+          "recall": 0.2923076923076923
+        },
+        "GradientBoosting": {
+          "f1": 0.40480961923847697,
+          "precision": 0.27371273712737126,
+          "recall": 0.7769230769230769
+        },
+        "MLP_Wide": {
+          "f1": 0.3993302637086647,
+          "precision": 0.2742955721679126,
+          "recall": 0.7338461538461538
+        },
+        "MLP_Large": {
+          "f1": 0.39747899159663863,
+          "precision": 0.27341040462427746,
+          "recall": 0.7276923076923076
+        },
+        "MLP_Small": {
+          "f1": 0.36728147554129914,
+          "precision": 0.24837310195227766,
+          "recall": 0.7046153846153846
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.3489802525089026,
+          "precision": 0.22099220992209923,
+          "recall": 0.8292307692307692
+        },
+        "MLP_Medium": {
+          "f1": 0.34756302521008403,
+          "precision": 0.22236559139784945,
+          "recall": 0.7953846153846154
+        }
+      }
+    },
+    "reversal_to_bear": {
+      "accuracy": 0.9653017814411061,
+      "precision": 0.4706994328922495,
+      "recall": 0.5071283095723014,
+      "f1": 0.48823529411764705,
+      "positive_rate": 0.03175895765472313,
+      "test_positive_rate": 0.03263759638394044,
+      "n_samples": 60172,
+      "n_test": 15044,
+      "best_model": "GradientBoosting_Deep",
+      "all_models": {
+        "GradientBoosting_Deep": {
+          "f1": 0.48823529411764705,
+          "precision": 0.4706994328922495,
+          "recall": 0.5071283095723014
+        },
+        "XGBoost_Deep": {
+          "f1": 0.43266832917705733,
+          "precision": 0.31176999101527403,
+          "recall": 0.7067209775967414
+        },
+        "MLP_Wide": {
+          "f1": 0.40620592383638926,
+          "precision": 0.3106796116504854,
+          "recall": 0.5865580448065173
+        },
+        "GradientBoosting": {
+          "f1": 0.4033232628398791,
+          "precision": 0.3205282112845138,
+          "recall": 0.5437881873727087
+        },
+        "HistGradientBoosting": {
+          "f1": 0.4010989010989011,
+          "precision": 0.30259067357512953,
+          "recall": 0.594704684317719
+        },
+        "MLP_Large": {
+          "f1": 0.38589487691284097,
+          "precision": 0.2865612648221344,
+          "recall": 0.5906313645621182
+        },
+        "MLP_Medium": {
+          "f1": 0.3608815426997245,
+          "precision": 0.2726326742976067,
+          "recall": 0.5336048879837068
+        },
+        "MLP_Small": {
+          "f1": 0.34991222937390287,
+          "precision": 0.24548440065681446,
+          "recall": 0.6089613034623218
+        },
+        "KNeighbors_5": {
+          "f1": 0.3487654320987654,
+          "precision": 0.7197452229299363,
+          "recall": 0.23014256619144602
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.3444759206798867,
+          "precision": 0.23861852433281006,
+          "recall": 0.6191446028513238
+        }
+      }
+    },
+    "large_drawdown": {
+      "accuracy": 0.9811885136931667,
+      "precision": 0.6025369978858351,
+      "recall": 0.75,
+      "f1": 0.6682297772567409,
+      "positive_rate": 0.025277537725187794,
+      "test_positive_rate": 0.025259239563945757,
+      "n_samples": 60172,
+      "n_test": 15044,
+      "best_model": "XGBoost_Deep",
+      "all_models": {
+        "XGBoost_Deep": {
+          "f1": 0.6682297772567409,
+          "precision": 0.6025369978858351,
+          "recall": 0.75
+        },
+        "GradientBoosting_Deep": {
+          "f1": 0.6493860845839018,
+          "precision": 0.6742209631728046,
+          "recall": 0.6263157894736842
+        },
+        "HistGradientBoosting": {
+          "f1": 0.6049382716049383,
+          "precision": 0.5697674418604651,
+          "recall": 0.6447368421052632
+        },
+        "GradientBoosting": {
+          "f1": 0.5558086560364465,
+          "precision": 0.4899598393574297,
+          "recall": 0.6421052631578947
+        },
+        "MLP_Wide": {
+          "f1": 0.5232323232323233,
+          "precision": 0.4245901639344262,
+          "recall": 0.6815789473684211
+        },
+        "KNeighbors_5": {
+          "f1": 0.4808743169398907,
+          "precision": 0.7810650887573964,
+          "recall": 0.3473684210526316
+        },
+        "MLP_Medium": {
+          "f1": 0.44358727097396333,
+          "precision": 0.350076103500761,
+          "recall": 0.6052631578947368
+        },
+        "HistGradientBoosting_Fast": {
+          "f1": 0.44170616113744077,
+          "precision": 0.3451851851851852,
+          "recall": 0.6131578947368421
+        },
+        "XGBoost": {
+          "f1": 0.43027330063069374,
+          "precision": 0.2932187201528176,
+          "recall": 0.8078947368421052
+        },
+        "LightGBM_Deep": {
+          "f1": 0.39903846153846156,
+          "precision": 0.2585669781931464,
+          "recall": 0.8736842105263158
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "accumulation": 9.58,
+    "distribution": 9.58,
+    "reversal": 8.129999999999999,
+    "large_drawdown": 17.669999999999998
+  },
+  "trained_at": "2026-01-17T23:21:11.790004",
+  "phase_trained": true,
+  "phase_metrics": {
+    "accuracy": 0.925817601701675,
+    "f1_macro": 0.7629619022726571,
+    "f1_weighted": 0.9223195177504111,
+    "n_classes": 7
+  }
+}
